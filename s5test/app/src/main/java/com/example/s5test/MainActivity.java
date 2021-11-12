@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         ///asdfas;dkfa;slkdfj;laskdjf;alskdjf;saf
         ///asdfasd;fja;sldkfj
 //this is a change
+<<<<<<< Updated upstream
+=======
+        // Peter change
+        // Jason change
+>>>>>>> Stashed changes
 
     }
 }
