@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginStart="26dp"
+                    android:background="@drawable/back_button1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="174dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/prompt"
+                    android:text="PROFILE"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="411dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/rectangle2"/>
+
+                <TextView
+                    android:id="@+id/opportunity_apply_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="116dp"
+                    android:layout_marginTop="108dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Apply by: April 1st, 2021"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/opportunity_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="169dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/opportunity_image1"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/prompt"
+                    android:text="10K Runner"
+                    android:textColor="#FF000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Vancouver, B.C."
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Participate in our 10K run as a volunteer to help us raise money for medical research."
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/rectangle3"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/prompt"
+                        android:text="Position Requirements"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginStart="120dp"
+                        android:background="@drawable/collapse_button"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="- Be 16 years or older"
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:text="- Wear appropriate clothing for all weather conditions"
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/rectangle3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/rectangle3"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/prompt"
+                        android:text="Organization Description"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginStart="120dp"
+                        android:background="@drawable/collapse_button"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="DEF Health raises money for Medical Research."
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/rectangle3"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:layout_marginTop="485dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangle1" />
+
+        <Button
+            android:id="@+id/submit_form_button"
+            android:layout_width="347dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="32dp"
+            android:fontFamily="sans-serif"
+            android:text="Copy email to clipboard"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_rectangle1"/>
+
+        <Button
+            android:id="@+id/hide_opportunity_button"
+            android:layout_width="347dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="97dp"
+            android:layout_marginStart="32dp"
+            android:fontFamily="sans-serif"
+            android:text="Hide / minimize opportunity"
+            android:textStyle="bold"
+            android:textColor="#FF35557F"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/invisible_rectangle2"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

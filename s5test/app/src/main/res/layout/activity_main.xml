@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="184dp"
+                    android:layout_marginTop="65dp"
+                    android:fontFamily="@font/prompt"
+                    android:text="FORM"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="113dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Age"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/age_spinner"
+                    android:layout_width="347dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="140dp"
+                    android:background="@drawable/age_dropdown_menu"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="230dp"
+                    android:fontFamily="sans-serif"
+                    android:text="City/Town"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/city_spinner"
+                    android:layout_width="347dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="257dp"
+                    android:background="@drawable/city_dropdown_menu"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="31dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Driver's Licence"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="68dp"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Yes"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp" />
+<!--                        android:onClick="onRadioButtonClicked"-->
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif"
+                        android:text="No"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp" />
+<!--                    android:onClick="onRadioButtonClicked"-->
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Certifications"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/test1"
+                    android:layout_width="347dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="57dp"
+                    android:background="@drawable/test1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="221dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Ex. First Aid, Red Cross"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="169dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Languages spoken"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/test2"
+                    android:layout_width="347dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="196dp"
+                    android:background="@drawable/test2" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="37dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Days Available"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Monday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+<!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Tuesday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Wednesday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Thursday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Friday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Saturday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22.5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Sunday"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp" />
+                <!--                    android:onClick="onCheckBoxClicked"-->
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Past Experience (Optional)"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/test3"
+                    android:layout_width="347dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="57dp"
+                    android:background="@drawable/test3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="169dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Main Interests"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/test4"
+                    android:layout_width="347dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="196dp"
+                    android:layout_marginBottom="165dp"
+                    android:background="@drawable/test4" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginTop="564dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangle1" />
+
+        <Button
+            android:id="@+id/submit_form_button"
+            android:layout_width="347dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="32dp"
+            android:fontFamily="sans-serif"
+            android:text="Submit Form"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_rectangle1"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
