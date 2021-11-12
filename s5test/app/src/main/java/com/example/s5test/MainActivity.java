@@ -43,7 +43,11 @@ public class MainActivity extends AppCompatActivity {
 >>>>>>> bdcf1524b689dcfe4ebfcf023006b1215f35d473
 
         // oscar test change
+<<<<<<< HEAD
         //alskdjf;alskdjasldkfj;alskdjf
 
+=======
+        // anmotehr nweadasdwa
+>>>>>>> 1a41dddb4e0989895809ce6385eed325e272dd2b
     }
 }
