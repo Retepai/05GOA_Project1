@@ -27,14 +27,12 @@ public class MainActivity extends AppCompatActivity {
 //this is a change
         // Peter change
         //peter 2nd change
-
+<<<<<<< HEAD
         //peter 3rd change
-
+=======
         //RNADNOM+AWDADWJ)AJD
         //w dadoaihdiowhodahw
-        // peter 4th change
-        
-
+>>>>>>> 343e76f46254943b82375dd4b363f242d0f79857
 
     }
 }

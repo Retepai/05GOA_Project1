@@ -28,13 +28,5 @@ public class MainActivity extends AppCompatActivity {
         // Peter change
         //peter 2nd change
 
-        //peter 3rd change
-
-        //RNADNOM+AWDADWJ)AJD
-        //w dadoaihdiowhodahw
-        // peter 4th change
-        
-
-
     }
 }
