@@ -13,6 +13,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        TextView textView = findViewById(R.id.textview);
+<<<<<<< Updated upstream
         // made changes to oscar branch
+=======
+        // HELLOAWodihaiowdha
+
+
+
+        //asdfasldkfja;lskdfj;laskdjf
+        ///asdjflkasjk;dlfkajs;dlkf
+        //asdjfljasdl;kfjasl;dkfj
+        //asdlkfja;slkdfj
+
+        ///asdfas;dkfa;slkdfj;laskdjf;alskdjf;saf
+        ///asdfasd;fja;sldkfj
+//this is a change
+        // Peter change
+
+        // ABSDBOWAUUDBBAIUDBIABI TETSaWtadsING CHANGE
+>>>>>>> Stashed changes
     }
 }
