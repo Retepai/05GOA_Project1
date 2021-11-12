@@ -32,9 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         //RNADNOM+AWDADWJ)AJD
         //w dadoaihdiowhodahw
+<<<<<<< HEAD
 
         // peter 4th change
         // peter 5th change
+=======
 
+        // peter 4th change
+
+>>>>>>> bdcf1524b689dcfe4ebfcf023006b1215f35d473
+
+        // oscar test change
     }
 }
