@@ -13,7 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
+=======
+        //jason change1
+//peter change 3
+}
+>>>>>>> f15068557ba22780df4bb04f88dfd921b81901fa
 =======
         //jason change1
 //peter change 3
