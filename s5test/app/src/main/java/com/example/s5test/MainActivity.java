@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
 =======
         // anmotehr nweadasdwa
 >>>>>>> 1a41dddb4e0989895809ce6385eed325e272dd2b
+<<<<<<< HEAD
 
             //askdjf;alsdkjfl;
+=======
+            // ANOWDHOAUHWDUA
+>>>>>>> 6a22ee65b856da49da5a41f13c7ccc031681286e
     }
 }
