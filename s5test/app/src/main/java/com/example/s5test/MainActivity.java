@@ -55,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
 =======
             // ANOWDHOAUHWDUA
 >>>>>>> 6a22ee65b856da49da5a41f13c7ccc031681286e
+<<<<<<< HEAD
 
             //jason change
+=======
+            //asd;flkajsd;lfkjasdf
+>>>>>>> 3c6b009ca9f571f3de52f9afc5524eab54976713
     }
 }
