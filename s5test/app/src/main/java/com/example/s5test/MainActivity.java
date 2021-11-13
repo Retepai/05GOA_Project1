@@ -15,17 +15,7 @@ public class MainActivity extends AppCompatActivity {
         //hi
         //hi
         //hi
-        // this is a comment
-        /*this is also a comment*/
-        //this is to mess up the code
-        //Bryan was here
-        //peter was here
 
-        //peter was here
-
-        //what in the world
-
-        // peter was here
 
 
     }
