@@ -15,11 +15,6 @@ public class MainActivity extends AppCompatActivity {
         //hi
         //hi
         //hi
-<<<<<<< HEAD
-        //Kevin was here
-=======
-        // peter change 
->>>>>>> 94cdf8e112b522764fd5166d8d479b5b2d8c12b7
 
 
     }
