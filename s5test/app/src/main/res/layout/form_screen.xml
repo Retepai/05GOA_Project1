@@ -305,32 +305,30 @@
         </LinearLayout>
 
     </ScrollView>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:layout_marginTop="625dp">
+        android:layout_marginTop="564dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="105dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
             android:background="@drawable/rectangle1" />
 
         <Button
             android:id="@+id/submit_form_button"
             android:layout_width="347dp"
             android:layout_height="57dp"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/rounded_rectangle1"
+            android:layout_marginStart="32dp"
             android:fontFamily="sans-serif"
             android:text="Submit Form"
-            android:textAllCaps="false"
             android:textColor="#FFFFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_rectangle1"/>
 
     </RelativeLayout>
 
