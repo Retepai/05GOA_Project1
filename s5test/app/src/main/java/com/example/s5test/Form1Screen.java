@@ -12,7 +12,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class Form1Screen extends AppCompatActivity {
+
+    ArrayList<String> certifications  = new ArrayList<>();
+    ArrayList<String> languages = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,31 +62,29 @@ public class Form1Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                how to make it so this also checks if what the user typed is real numbers?
-                String userage= age_edit_text.getText().toString().trim();
-                if ((age_edit_text.getText().toString().trim().isEmpty())||userage.matches("[a-zA-Z]+\\.?")){
+                String userAge = age_edit_text.getText().toString().trim();
+                if (userAge.isEmpty() || userAge.matches("[a-zA-Z]+\\.?")){
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     age_valid_number_error.setVisibility(View.VISIBLE);
-                }else{
-                    System.out.println("test");
-                    age_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
-
-                    age_valid_number_error.setVisibility(View.GONE);
-
                 }
-                String usercity = city_edit_text.getText().toString();
-                if (city_edit_text.getText().toString().trim().isEmpty()||usercity.matches(".*\\d.*")) {
+                else {
+                    age_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
+                    age_valid_number_error.setVisibility(View.GONE);
+                }
+
+                String userCity = city_edit_text.getText().toString();
+                if (userCity.trim().isEmpty() || userCity.matches(".*\\d.*")) {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     city_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     city_valid_word_error.setVisibility(View.VISIBLE);
-                }else{
+                }
+                else {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
                     city_valid_word_error.setVisibility(View.GONE);
                     city_edit_text.getText().clear();
                     age_edit_text.getText().clear();
                     open_form2_screen();
-
-
                 }
 
                 if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
@@ -92,36 +95,52 @@ public class Form1Screen extends AppCompatActivity {
             }
         });
 
-//        how to make it so when clicked, color = 1, when clicked again, color deactivates and turns into 2
-        get_wet_certification.setOnClickListener(v -> {
-            if (get_wet_certification.isActivated()) {
-                System.out.println("this is clicked");
-            }
-            else if (!get_wet_certification.isActivated()) {
-                System.out.println("not clicked");
-            }
-        });
+        get_wet_certification.setOnClickListener(v -> checkActivation(get_wet_certification,0));
+        first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0));
+        food_safe_certification.setOnClickListener(v -> checkActivation(food_safe_certification,0));
+        forklift_operator_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0));
+        babysitting_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0));
 
-//        get_wet_certification.setOnClickListener(v -> get_wet_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-        first_aid_certification.setOnClickListener(v -> first_aid_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-        food_safe_certification.setOnClickListener(v -> food_safe_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-        forklift_operator_certification.setOnClickListener(v -> forklift_operator_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-        babysitting_certification.setOnClickListener(v -> babysitting_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-        english_language.setOnClickListener(v -> english_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        japanese_language.setOnClickListener(v -> japanese_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        french_language.setOnClickListener(v -> french_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        russian_language.setOnClickListener(v -> russian_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        portuguese_language.setOnClickListener(v -> portuguese_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        hindi_language.setOnClickListener(v -> hindi_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        korean_language.setOnClickListener(v -> korean_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        german_language.setOnClickListener(v -> german_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        spanish_language.setOnClickListener(v -> spanish_language.setBackgroundResource(R.drawable.rounded_rectangle1));
-        chinese_language.setOnClickListener(v -> chinese_language.setBackgroundResource(R.drawable.rounded_rectangle1));
+        english_language.setOnClickListener(v -> checkActivation(english_language,1));
+        japanese_language.setOnClickListener(v -> checkActivation(japanese_language,1));
+        french_language.setOnClickListener(v -> checkActivation(french_language,1));
+        russian_language.setOnClickListener(v -> checkActivation(russian_language,1));
+        portuguese_language.setOnClickListener(v -> checkActivation(portuguese_language,1));
+        hindi_language.setOnClickListener(v -> checkActivation(hindi_language,1));
+        korean_language.setOnClickListener(v -> checkActivation(korean_language,1));
+        german_language.setOnClickListener(v -> checkActivation(german_language,1));
+        spanish_language.setOnClickListener(v -> checkActivation(spanish_language,1));
+        chinese_language.setOnClickListener(v -> checkActivation(chinese_language,1));
     }
 
     private void open_form2_screen() {
         Intent open_form2_screen = new Intent(this, Form2Screen.class);
         startActivity(open_form2_screen);
+    }
 
+    private void checkActivation(Button b, int type) {
+        // type: 0 = cert, 1 = lang
+        if (b.isActivated()) {
+//            System.out.println(b.getId() + " activated -> deactivated");
+            b.setBackgroundResource(R.drawable.rounded_rectangle3);
+            b.setActivated(false);
+            if (type == 0) {
+                certifications.remove(Integer.toString(b.getId()));
+            }
+            else {
+                languages.remove(Integer.toString(b.getId()));
+            }
+        }
+        else {
+//            System.out.println(b.getId() + " deactivated -> activated");
+            b.setBackgroundResource(R.drawable.rounded_rectangle1);
+            b.setActivated(true);
+            if (type == 0) {
+                certifications.add(Integer.toString(b.getId()));
+            }
+            else {
+                languages.add(Integer.toString(b.getId()));
+            }
+        }
     }
 }
