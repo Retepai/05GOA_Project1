@@ -16,12 +16,12 @@ public class Form1Screen extends AppCompatActivity {
 
         Button  submit_form_button= findViewById(R.id.submit_form_button);
 
-        submit_form_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open_matches_screen();
-            }
-        });
+//        submit_form_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                open_matches_screen();
+//            }
+//        });
     }
 
     private void open_matches_screen() {
