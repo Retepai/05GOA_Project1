@@ -58,7 +58,7 @@ public class Form1Screen extends AppCompatActivity {
             public void onClick(View v) {
 //                how to make it so this also checks if what the user typed is real numbers?
                 String userage= age_edit_text.getText().toString().trim();
-                if ((age_edit_text.getText().toString().trim().isEmpty())||userage.matches("\\w+\\.?")){
+                if ((age_edit_text.getText().toString().trim().isEmpty())||userage.matches("[a-zA-Z]+\\.?")){
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     age_valid_number_error.setVisibility(View.VISIBLE);
@@ -68,8 +68,6 @@ public class Form1Screen extends AppCompatActivity {
 
                     age_valid_number_error.setVisibility(View.GONE);
 
-
-
                 }
                 String usercity = city_edit_text.getText().toString();
                 if (city_edit_text.getText().toString().trim().isEmpty()||usercity.matches(".*\\d.*")) {
@@ -78,17 +76,18 @@ public class Form1Screen extends AppCompatActivity {
                     city_valid_word_error.setVisibility(View.VISIBLE);
                 }else{
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
-
                     city_valid_word_error.setVisibility(View.GONE);
+                    city_edit_text.getText().clear();
+                    age_edit_text.getText().clear();
                     open_form2_screen();
 
 
                 }
 
-                /* if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
+                if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
 //                temporary thing here until proper error checking gets added
                     System.out.println("nothing checked");
-                }*/
+                }
 
             }
         });
@@ -108,7 +107,6 @@ public class Form1Screen extends AppCompatActivity {
         food_safe_certification.setOnClickListener(v -> food_safe_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
         forklift_operator_certification.setOnClickListener(v -> forklift_operator_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
         babysitting_certification.setOnClickListener(v -> babysitting_certification.setBackgroundResource(R.drawable.rounded_rectangle1));
-
         english_language.setOnClickListener(v -> english_language.setBackgroundResource(R.drawable.rounded_rectangle1));
         japanese_language.setOnClickListener(v -> japanese_language.setBackgroundResource(R.drawable.rounded_rectangle1));
         french_language.setOnClickListener(v -> french_language.setBackgroundResource(R.drawable.rounded_rectangle1));
