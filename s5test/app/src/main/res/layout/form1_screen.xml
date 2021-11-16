@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
     android:background="#ffffff">
 
     <ScrollView
@@ -17,9 +16,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -36,63 +36,99 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="69dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/public_sans"
                     android:text="Age"
                     android:textColor="#FF000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="347dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="96dp"
-                    android:background="@drawable/rounded_rectangle2" />
+                    <ImageView
+                        android:id="@+id/age_edit_text_box"
+                        android:layout_width="347dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rounded_rectangle2" />
 
+                    <EditText
+                        android:id="@+id/age_edit_text"
+                        android:layout_width="327dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="52dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/public_sans"
+                        android:hint="Age"
+                        android:textSize="16sp" />
 
-                <EditText
-                    android:id="@+id/age_edit_text"
-                    android:layout_width="327dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="96dp"
-                    android:hint="Age"
-                    android:textSize="16sp"
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/age_valid_number_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/public_sans"
-                    android:background="@android:color/transparent"/>
+                    android:text="Please enter a valid number"
+                    android:textColor="#D92C2C"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="186dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/public_sans"
                     android:text="City/Town"
                     android:textColor="#FF000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="347dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="213dp"
-                    android:background="@drawable/rounded_rectangle2" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/city_edit_text"
-                    android:layout_width="327dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="213dp"
-                    android:hint="City"
-                    android:textSize="16sp"
+                    <ImageView
+                        android:id="@+id/city_edit_text_box"
+                        android:layout_width="347dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rounded_rectangle2" />
+
+                    <EditText
+                        android:id="@+id/city_edit_text"
+                        android:layout_width="327dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="52dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/public_sans"
+                        android:hint="City"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/city_valid_word_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/public_sans"
-                    android:background="@android:color/transparent" />
+                    android:text="Please enter a valid city"
+                    android:textColor="#D92C2C"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -110,13 +146,15 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/drivers_licence_radio_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="68dp"
                     android:orientation="vertical">
+
                     <RadioButton
-                        android:id="@+id/yes"
+                        android:id="@+id/drivers_licence_radio_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/public_sans"
@@ -124,7 +162,9 @@
                         android:textColor="#FF000000"
                         android:textSize="16sp" />
                     <!--                        android:onClick="onRadioButtonClicked"-->
+
                     <RadioButton
+                        android:id="@+id/drivers_licence_radio_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -133,6 +173,7 @@
                         android:textColor="#FF000000"
                         android:textSize="16sp" />
                     <!--                    android:onClick="onRadioButtonClicked"-->
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -268,7 +309,7 @@
                     android:layout_marginStart="35dp"
                     android:layout_marginTop="226dp"
                     android:fontFamily="@font/public_sans"
-                    android:text="Select a tag"
+                    android:text="Select languages you are proficient in"
                     android:textColor="#FF333333"
                     android:textSize="13sp" />
 
@@ -423,7 +464,7 @@
                             android:layout_height="40dp"
                             android:layout_marginStart="14dp"
                             android:layout_marginTop="0dp"
-                            android:layout_marginBottom="225dp"
+                            android:layout_marginBottom="135dp"
                             android:background="@drawable/rounded_rectangle3"
                             android:fontFamily="@font/public_sans"
                             android:text="Chinese"
@@ -437,161 +478,42 @@
 
             </RelativeLayout>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="35dp"-->
-<!--                    android:layout_marginTop="37dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Days Available"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:textStyle="bold"/>-->
-
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Monday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Tuesday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Wednesday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Thursday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Friday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Saturday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--                <CheckBox-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="32dp"-->
-<!--                    android:layout_marginTop="22.5dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Sunday"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp" />-->
-<!--                &lt;!&ndash;                    android:onClick="onCheckBoxClicked"&ndash;&gt;-->
-<!--            </LinearLayout>-->
-
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="35dp"-->
-<!--                    android:layout_marginTop="30dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Past Experience (Optional)"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp"-->
-<!--                    android:textStyle="bold" />-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="35dp"-->
-<!--                    android:layout_marginTop="169dp"-->
-<!--                    android:fontFamily="sans-serif"-->
-<!--                    android:text="Main Interests"-->
-<!--                    android:textColor="#FF000000"-->
-<!--                    android:textSize="16sp"-->
-<!--                    android:textStyle="bold" />-->
-
-<!--            </RelativeLayout>-->
-
         </LinearLayout>
 
     </ScrollView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginTop="564dp">
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="105dp"
-            android:layout_marginTop="564dp">
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangle1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rectangle1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/next_form_button"
+            android:layout_width="347dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:fontFamily="sans-serif"
+            android:text="Go to Next Page"
+            android:textColor="#193D6D"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_rectangle4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <Button
-                android:id="@+id/submit_form_button"
-                android:layout_width="347dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="0dp"
-                android:fontFamily="sans-serif"
-                android:text="Next"
-                android:textColor="#3A7CD2"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                android:background="@drawable/rounded_rectangle4"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
-
-<!--hello this test-->
-<!--more test-->

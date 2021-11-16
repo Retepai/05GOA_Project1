@@ -11,8 +11,9 @@
         android:theme="@style/Theme.S5test">
         <activity android:name=".MainActivity"/>
         <activity android:name=".Form1Screen"/>
+        <activity android:name=".Form2Screen"/>
         <activity android:name=".MatchesScreen"/>
-        <activity android:name=".OnBoarding">
+        <activity android:name=".OnBoardingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
