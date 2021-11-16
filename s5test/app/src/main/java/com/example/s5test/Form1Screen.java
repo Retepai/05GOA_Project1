@@ -57,25 +57,39 @@ public class Form1Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                how to make it so this also checks if what the user typed is real numbers?
-                if (age_edit_text.getText().toString().trim().equalsIgnoreCase("")) {
+                String userage= age_edit_text.getText().toString().trim();
+                if ((age_edit_text.getText().toString().trim().isEmpty())||userage.matches("\\w+\\.?")){
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     age_valid_number_error.setVisibility(View.VISIBLE);
+                }else{
+                    System.out.println("test");
+                    age_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
+
+                    age_valid_number_error.setVisibility(View.GONE);
+
+
+
                 }
-//                how to make it so this checks both boxes for the condition? do i use switch statements or something?
-//                how to make it so this also checks if what the user typed is real words?
-                else if (city_edit_text.getText().toString().trim().equalsIgnoreCase("")) {
+                String usercity = city_edit_text.getText().toString();
+                if (city_edit_text.getText().toString().trim().isEmpty()||usercity.matches(".*\\d.*")) {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     city_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     city_valid_word_error.setVisibility(View.VISIBLE);
+                }else{
+                    city_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
+
+                    city_valid_word_error.setVisibility(View.GONE);
+                    open_form2_screen();
+
+
                 }
-                else if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
+
+                /* if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
 //                temporary thing here until proper error checking gets added
                     System.out.println("nothing checked");
-                }
-                else {
-                    open_form2_screen();
-                }
+                }*/
+
             }
         });
 
