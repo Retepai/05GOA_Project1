@@ -6,28 +6,39 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class MatchesScreen extends AppCompatActivity {
+
+    View view;
+    MatchesAdapter MatchesAdapter;
+    RecyclerView humanitarianAidRecyclerView;
+    RecyclerView fitnessRecyclerView;
+    RecyclerView constructionRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.matches_screen);
 
-       // Button get_started_button = findViewById(R.id.get_started_button);
-
-       /* get_started_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open_form1_screen();
-            }
-        });
+        setupRecyclerView();
     }
 
-    private void open_form1_screen() {
-        Intent open_form1_screen = new Intent(this, Form1Screen.class);
-        startActivity(open_form1_screen);
+    void setupRecyclerView() {
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        humanitarianAidRecyclerView.setLayoutManager(layoutManager);
+        MatchesAdapter = new MatchesAdapter(this, MainActivity.opportunityList);
+        humanitarianAidRecyclerView.setAdapter(MatchesAdapter);
+        fitnessRecyclerView.setAdapter(MatchesAdapter);
+        constructionRecyclerView.setAdapter(MatchesAdapter);
 
-        */
+//        humanitarianAidRecyclerView = view.findViewById(R.id.humanitarian_aid_list_view);
+//        fitnessRecyclerView = view.findViewById(R.id.fitness_list_view);
+//        constructionRecyclerView = view.findViewById(R.id.construction_list_view);
+
+
     }
 }

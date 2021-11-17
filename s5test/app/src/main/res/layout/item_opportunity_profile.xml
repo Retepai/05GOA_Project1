@@ -58,9 +58,9 @@
                     android:id="@+id/opportunity_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="169dp"
                     android:layout_marginStart="31dp"
-                    android:background="@drawable/opportunity_image1"/>
+                    android:layout_marginTop="169dp"
+                    android:background="@drawable/opportunity_image1" />
 
             </RelativeLayout>
 

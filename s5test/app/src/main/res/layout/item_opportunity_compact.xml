@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFffffff">
+    android:background="#FFffffff"
+    tools:context=".MainActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,12 +24,12 @@
                 android:id="@+id/opportunity_logo"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/opportunity_logo1"/>
+                android:layout_marginTop="16dp"
+                android:background="@drawable/opportunity_logo1" />
 
             <TextView
-                android:id="@+id/opportunity_job"
+                android:id="@+id/opportunity_name"
                 android:layout_width="124dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="16dp"
@@ -37,7 +38,7 @@
                 android:text="Food Bank Helper"
                 android:textColor="#FF000000"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/opportunity_location"
@@ -51,7 +52,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/opportunity_organization"
+                android:id="@+id/organization_name"
                 android:layout_width="124dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="16dp"
@@ -62,6 +63,7 @@
                 android:textSize="13sp" />
 
             <Button
+                android:id="@+id/opportunity_apply"
                 android:layout_width="42dp"
                 android:layout_height="15dp"
                 android:layout_marginTop="206dp"
