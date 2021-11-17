@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MatchesScreen extends AppCompatActivity {
 
-    View view;
     MatchesAdapter MatchesAdapter;
     RecyclerView humanitarianAidRecyclerView;
     RecyclerView fitnessRecyclerView;
@@ -23,21 +22,28 @@ public class MatchesScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.matches_screen);
-
+        System.out.println("SCREEN:" + MainActivity.opportunityList.size());
         setupRecyclerView();
     }
 
     void setupRecyclerView() {
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-//        humanitarianAidRecyclerView.setLayoutManager(layoutManager);
-        MatchesAdapter = new MatchesAdapter(this, MainActivity.opportunityList);
+        humanitarianAidRecyclerView = findViewById(R.id.humanitarian_aid_list_view);
+        fitnessRecyclerView = findViewById(R.id.fitness_list_view);
+        constructionRecyclerView = findViewById(R.id.construction_list_view);
+
+        LinearLayoutManager hLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager fLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager cLayoutManager = new LinearLayoutManager(this);
+        humanitarianAidRecyclerView.setLayoutManager(hLayoutManager);
+        fitnessRecyclerView.setLayoutManager(fLayoutManager);
+        constructionRecyclerView.setLayoutManager(cLayoutManager);
+
+        MatchesAdapter = new MatchesAdapter(this,MainActivity.opportunityList);
         humanitarianAidRecyclerView.setAdapter(MatchesAdapter);
         fitnessRecyclerView.setAdapter(MatchesAdapter);
         constructionRecyclerView.setAdapter(MatchesAdapter);
 
-//        humanitarianAidRecyclerView = view.findViewById(R.id.humanitarian_aid_list_view);
-//        fitnessRecyclerView = view.findViewById(R.id.fitness_list_view);
-//        constructionRecyclerView = view.findViewById(R.id.construction_list_view);
+
 
 
     }

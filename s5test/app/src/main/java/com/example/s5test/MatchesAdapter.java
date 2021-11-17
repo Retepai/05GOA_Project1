@@ -32,7 +32,6 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MatchesViewHolder holder, int position) {
         // Taking information from opportunityCompactList and populating recycler view with specific data from each organization
-
         Organization organization = opportunityCompactList.get(position);
         holder.opportunityLogo.setImageResource(organization.opportunityLogo);
         holder.opportunityName.setText(organization.opportunityName);
