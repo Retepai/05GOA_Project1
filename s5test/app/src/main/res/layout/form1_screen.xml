@@ -145,6 +145,18 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/drivers_licence_radio_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/public_sans"
+                    android:text="Please select yes or no."
+                    android:textColor="#D92C2C"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
                 <RadioGroup
                     android:id="@+id/drivers_licence_radio_group"
                     android:layout_width="wrap_content"
@@ -157,6 +169,7 @@
                         android:id="@+id/drivers_licence_radio_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
                         android:fontFamily="@font/public_sans"
                         android:text="Yes"
                         android:textColor="#FF000000"
@@ -168,6 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        android:buttonTint="@color/black"
                         android:fontFamily="@font/public_sans"
                         android:text="No"
                         android:textColor="#FF000000"
@@ -188,10 +202,10 @@
                     android:layout_marginStart="35dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/public_sans"
-                    android:text="Certifications"
+                    android:text="Certifications (Optional)"
                     android:textColor="#FF000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -301,7 +315,7 @@
                     android:text="Languages"
                     android:textColor="#FF000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -317,7 +331,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="252dp">
+                    android:layout_marginTop="250dp">
+
+                    <TextView
+                        android:id="@+id/language_tag_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/public_sans"
+                        android:text="Please select a tag."
+                        android:textColor="@color/error_red"
+                        android:textSize="13sp"
+                        android:visibility="gone"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

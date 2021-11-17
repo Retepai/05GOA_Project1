@@ -1,6 +1,8 @@
 package com.example.s5test;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,16 +15,44 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Form1Screen extends AppCompatActivity {
 
     ArrayList<String> certifications  = new ArrayList<>();
     ArrayList<String> languages = new ArrayList<>();
 
+    boolean ageCriteriaFilled = false;
+    boolean cityCriteriaFilled = false;
+    boolean radioCriteriaFilled = false;
+    boolean languagesCriteriaFilled = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form1_screen);
+
+        ColorStateList colorStateListEnabled = new ColorStateList(
+                new int[][]
+                        {
+                                new int[]{android.R.attr.state_enabled}   // Enabled
+                        },
+                new int[]
+                        {
+                                Color.RED,   // enabled
+                        }
+        );
+
+        ColorStateList colorStateListDisabled = new ColorStateList(
+                new int[][]
+                        {
+                                new int[]{android.R.attr.state_enabled}   // Disabled
+                        },
+                new int[]
+                        {
+                                Color.BLACK,   // disabled
+                        }
+        );
 
         ImageView age_edit_text_box = findViewById(R.id.age_edit_text_box);
         EditText age_edit_text = findViewById(R.id.age_edit_text);
@@ -33,11 +63,13 @@ public class Form1Screen extends AppCompatActivity {
         RadioGroup drivers_licence_radio_group = findViewById(R.id.drivers_licence_radio_group);
         RadioButton drivers_licence_radio_yes = findViewById(R.id.drivers_licence_radio_yes);
         RadioButton drivers_licence_radio_no = findViewById(R.id.drivers_licence_radio_no);
+        TextView drivers_license_radio_error = findViewById(R.id.drivers_licence_radio_error);
         Button get_wet_certification = findViewById(R.id.get_wet_certification);
         Button first_aid_certification = findViewById(R.id.first_aid_certification);
         Button food_safe_certification = findViewById(R.id.food_safe_certification);
         Button forklift_operator_certification = findViewById(R.id.forklift_operator_certification);
         Button babysitting_certification = findViewById(R.id.babysitting_certification);
+        TextView language_tag_error = findViewById(R.id.language_tag_error);
         Button english_language = findViewById(R.id.english_language);
         Button japanese_language = findViewById(R.id.japanese_language);
         Button french_language = findViewById(R.id.french_language);
@@ -48,6 +80,8 @@ public class Form1Screen extends AppCompatActivity {
         Button german_language = findViewById(R.id.german_language);
         Button spanish_language = findViewById(R.id.spanish_language);
         Button chinese_language = findViewById(R.id.chinese_language);
+
+        ArrayList<Button> languageButtons = new ArrayList<>(Arrays.asList(english_language, japanese_language, french_language, russian_language, portuguese_language, hindi_language, korean_language, german_language, spanish_language, chinese_language));
 
 //        if any error checks still remain true, this button will change to being greyed out
         Button next_form_button = findViewById(R.id.next_form_button);
@@ -67,10 +101,14 @@ public class Form1Screen extends AppCompatActivity {
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     age_valid_number_error.setVisibility(View.VISIBLE);
+                    ageCriteriaFilled = false;
                 }
                 else {
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
+                    age_edit_text.setTextColor(getResources().getColor(R.color.black));
+                    age_edit_text.setHintTextColor(getResources().getColor(R.color.normal_grey));
                     age_valid_number_error.setVisibility(View.GONE);
+                    ageCriteriaFilled = true;
                 }
 
                 String userCity = city_edit_text.getText().toString();
@@ -78,22 +116,48 @@ public class Form1Screen extends AppCompatActivity {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
                     city_edit_text.setTextColor(getResources().getColor(R.color.error_red));
                     city_valid_word_error.setVisibility(View.VISIBLE);
+                    cityCriteriaFilled = false;
                 }
                 else {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
+                    city_edit_text.setTextColor(getResources().getColor(R.color.black));
+                    city_edit_text.setHintTextColor(getResources().getColor(R.color.normal_grey));
                     city_valid_word_error.setVisibility(View.GONE);
-                    city_edit_text.getText().clear();
-                    age_edit_text.getText().clear();
-                    open_form2_screen();
+                    cityCriteriaFilled = true;
+                }
+                if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
+                    drivers_licence_radio_yes.setButtonTintList(colorStateListEnabled);
+                    drivers_licence_radio_no.setButtonTintList(colorStateListEnabled);
+                    drivers_license_radio_error.setVisibility(View.VISIBLE);
+                    radioCriteriaFilled = false;
+                }
+                else {
+                    drivers_licence_radio_yes.setButtonTintList(colorStateListDisabled);
+                    drivers_licence_radio_no.setButtonTintList(colorStateListDisabled);
+                    drivers_license_radio_error.setVisibility(View.GONE);
+                    radioCriteriaFilled = true;
+                }
+                if (allLanguagesFalse(languageButtons)) {
+                    language_tag_error.setVisibility(View.VISIBLE);
+                    languagesCriteriaFilled = false;
+                }
+                else {
+                    language_tag_error.setVisibility(View.GONE);
+                    languagesCriteriaFilled = true;
                 }
 
-                if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
-//                temporary thing here until proper error checking gets added
-                    System.out.println("nothing checked");
+                if (ageCriteriaFilled && cityCriteriaFilled && radioCriteriaFilled && languagesCriteriaFilled) {
+                    city_edit_text.getText().clear();
+                    age_edit_text.getText().clear();
+                    drivers_licence_radio_group.clearCheck();
+                    open_form2_screen();
                 }
 
             }
         });
+
+
+
 
         get_wet_certification.setOnClickListener(v -> checkActivation(get_wet_certification,0));
         first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0));
@@ -142,5 +206,14 @@ public class Form1Screen extends AppCompatActivity {
                 languages.add(Integer.toString(b.getId()));
             }
         }
+    }
+
+    private boolean allLanguagesFalse(ArrayList<Button> r1) {
+        for (Button b: r1) {
+            if (b.isActivated()) {
+                return false;
+            }
+        }
+        return true;
     }
 }
