@@ -32,27 +32,9 @@ public class Form1Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form1_screen);
 
-        ColorStateList colorStateListEnabled = new ColorStateList(
-                new int[][]
-                        {
-                                new int[]{android.R.attr.state_enabled}   // Enabled
-                        },
-                new int[]
-                        {
-                                Color.RED,   // enabled
-                        }
-        );
+        ColorStateList colorStateListEnabled = new ColorStateList(new int[][] {new int[] {android.R.attr.state_enabled}} /*{enabled}*/, new int[] {Color.RED} /*{enabled}*/);
 
-        ColorStateList colorStateListDisabled = new ColorStateList(
-                new int[][]
-                        {
-                                new int[]{android.R.attr.state_enabled}   // Disabled
-                        },
-                new int[]
-                        {
-                                Color.BLACK,   // disabled
-                        }
-        );
+        ColorStateList colorStateListDisabled = new ColorStateList(new int[][] {new int[] {android.R.attr.state_enabled}} /*{disabled}*/, new int[] {Color.BLACK} /*{disabled}*/);
 
         ImageView age_edit_text_box = findViewById(R.id.age_edit_text_box);
         EditText age_edit_text = findViewById(R.id.age_edit_text);
@@ -82,6 +64,7 @@ public class Form1Screen extends AppCompatActivity {
         Button chinese_language = findViewById(R.id.chinese_language);
 
         ArrayList<Button> languageButtons = new ArrayList<>(Arrays.asList(english_language, japanese_language, french_language, russian_language, portuguese_language, hindi_language, korean_language, german_language, spanish_language, chinese_language));
+        ArrayList<RadioButton> radioButtons = new ArrayList<>(Arrays.asList(drivers_licence_radio_no,drivers_licence_radio_yes));
 
 //        if any error checks still remain true, this button will change to being greyed out
         Button next_form_button = findViewById(R.id.next_form_button);
@@ -125,6 +108,7 @@ public class Form1Screen extends AppCompatActivity {
                     city_valid_word_error.setVisibility(View.GONE);
                     cityCriteriaFilled = true;
                 }
+
                 if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
                     drivers_licence_radio_yes.setButtonTintList(colorStateListEnabled);
                     drivers_licence_radio_no.setButtonTintList(colorStateListEnabled);
@@ -137,6 +121,7 @@ public class Form1Screen extends AppCompatActivity {
                     drivers_license_radio_error.setVisibility(View.GONE);
                     radioCriteriaFilled = true;
                 }
+
                 if (allLanguagesFalse(languageButtons)) {
                     language_tag_error.setVisibility(View.VISIBLE);
                     languagesCriteriaFilled = false;
@@ -152,12 +137,20 @@ public class Form1Screen extends AppCompatActivity {
                     drivers_licence_radio_group.clearCheck();
                     open_form2_screen();
                 }
-
             }
         });
 
-
-
+        for (RadioButton button : radioButtons) {
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    for (RadioButton round2 : radioButtons) {
+                        round2.setButtonTintList(colorStateListDisabled);
+                    }
+                    drivers_license_radio_error.setVisibility(View.GONE);
+                }
+            });
+        }
 
         get_wet_certification.setOnClickListener(v -> checkActivation(get_wet_certification,0));
         first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0));
@@ -209,7 +202,7 @@ public class Form1Screen extends AppCompatActivity {
     }
 
     private boolean allLanguagesFalse(ArrayList<Button> r1) {
-        for (Button b: r1) {
+        for (Button b : r1) {
             if (b.isActivated()) {
                 return false;
             }
