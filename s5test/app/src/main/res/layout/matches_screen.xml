@@ -98,7 +98,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -113,24 +113,24 @@
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="237dp"
                     android:layout_marginTop="77dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="237dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="0dp"
                         android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             android:id="@+id/humanitarian_aid_list_view"
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp" />
+                            android:layout_marginTop="0dp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
                     </LinearLayout>
 

@@ -31,7 +31,7 @@ public class MatchesScreen extends AppCompatActivity {
         fitnessRecyclerView = findViewById(R.id.fitness_list_view);
         constructionRecyclerView = findViewById(R.id.construction_list_view);
 
-        LinearLayoutManager hLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager hLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager fLayoutManager = new LinearLayoutManager(this);
         LinearLayoutManager cLayoutManager = new LinearLayoutManager(this);
         humanitarianAidRecyclerView.setLayoutManager(hLayoutManager);

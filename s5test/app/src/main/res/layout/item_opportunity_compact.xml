@@ -1,11 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFffffff"
-    tools:context=".MainActivity">
+    android:orientation="horizontal"
+    android:background="#FFffffff">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -16,9 +15,9 @@
                 android:id="@+id/background"
                 android:layout_width="156dp"
                 android:layout_height="237dp"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="0dp"
-                android:background="@drawable/rectangle1"/>
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rectangle1" />
 
             <ImageView
                 android:id="@+id/opportunity_logo"
@@ -77,4 +76,4 @@
 
         </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>
