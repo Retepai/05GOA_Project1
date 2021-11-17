@@ -37,17 +37,7 @@ public class MatchesScreen extends AppCompatActivity {
         constructionRecyclerView.setAdapter(MatchesAdapter);
 
         humanitarianAidRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-//        LinearLayoutManager hLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        LinearLayoutManager fLayoutManager = new LinearLayoutManager(this);
-        LinearLayoutManager cLayoutManager = new LinearLayoutManager(this);
-//        humanitarianAidRecyclerView.setLayoutManager(hLayoutManager);
-        fitnessRecyclerView.setLayoutManager(fLayoutManager);
-        constructionRecyclerView.setLayoutManager(cLayoutManager);
-
-
-
-
-
-
+        fitnessRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        constructionRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
     }
 }

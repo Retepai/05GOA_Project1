@@ -33,6 +33,20 @@ public class MainActivity extends AppCompatActivity {
         CIBC.opportunityLocation = "Vancouver, B.C.";
         CIBC.organizationName = "CIBC";
         opportunityList.add(CIBC);
+
+        Organization riotGames = new Organization();
+        riotGames.opportunityLogo = R.drawable.opportunity_logo1;
+        riotGames.opportunityName = "VALORANT QA Tester";
+        riotGames.opportunityLocation = "L.A., California";
+        riotGames.organizationName = "Riot Games";
+        opportunityList.add(riotGames);
+
+        Organization nathanBurgerShop = new Organization();
+        nathanBurgerShop.opportunityLogo = R.drawable.opportunity_logo1;
+        nathanBurgerShop.opportunityName = "Burger Taster #22";
+        nathanBurgerShop.opportunityLocation = "Richmond, B.C.";
+        nathanBurgerShop.organizationName = "NAHPOO BURGERS";
+        opportunityList.add(nathanBurgerShop);
     }
 
     private void open_on_boarding_screen() {
