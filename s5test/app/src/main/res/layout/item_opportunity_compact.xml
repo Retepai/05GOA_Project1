@@ -61,18 +61,17 @@
                 android:textColor="#FF000000"
                 android:textSize="13sp" />
 
-            <Button
+            <TextView
                 android:id="@+id/opportunity_apply"
                 android:layout_width="42dp"
                 android:layout_height="15dp"
-                android:layout_marginTop="206dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="206dp"
                 android:fontFamily="sans-serif"
-                android:textStyle="bold"
                 android:text="APPLY"
                 android:textColor="#FF3a7cd2"
                 android:textSize="13sp"
-                android:background="@color/white"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

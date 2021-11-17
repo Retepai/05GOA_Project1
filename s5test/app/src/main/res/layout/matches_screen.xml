@@ -19,13 +19,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <TextView
                     android:id="@+id/matches_back_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="26dp"
-                    android:layout_marginTop="43dp"
-                    android:background="@drawable/back_button1" />
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="@font/public_sans"
+                    android:text="Back"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
