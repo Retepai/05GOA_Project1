@@ -61,11 +61,29 @@ public class MainActivity extends AppCompatActivity {
         opportunityList.add(mastersOfYoga);
 
         Organization buddhistsOfTaiChi = new Organization();
-        buddhistsOfTaiChi.opportunityLogo = R.drawable.opportunity_logo1;
+        buddhistsOfTaiChi.opportunityLogo = R.drawable.opportunity_logo6;
         buddhistsOfTaiChi.opportunityName = "Tai-Chi Instructor";
         buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
-        buddhistsOfTaiChi.organizationName = "NAHPOO BURGERS";
-        opportunityList.add(nathanBurgerShop);
+        buddhistsOfTaiChi.organizationName = "Buddhists of Tai-Chi";
+        buddhistsOfTaiChi.opportunityApplyDate = "Jun 20th";
+        opportunityList.add(buddhistsOfTaiChi);
+
+        Organization ghiHomes = new Organization();
+        ghiHomes.opportunityLogo = R.drawable.opportunity_logo7;
+        ghiHomes.opportunityName = "Tai-Chi Instructor";
+        ghiHomes.opportunityLocation = "Vancouver, B.C.";
+        ghiHomes.organizationName = "Buddhists of Tai-Chi";
+        ghiHomes.opportunityApplyDate = "Start Mar 3rd";
+        opportunityList.add(ghiHomes);
+
+        Organization gardenBuilders = new Organization();
+        gardenBuilders.opportunityLogo = R.drawable.opportunity_logo7;
+        gardenBuilders.opportunityName = "Tai-Chi Instructor";
+        gardenBuilders.opportunityLocation = "Vancouver, B.C.";
+        gardenBuilders.organizationName = "Buddhists of Tai-Chi";
+        gardenBuilders.opportunityApplyDate = "Start Oct 10th";
+        opportunityList.add(ghiHomes);
+
     }
 
     private void open_on_boarding_screen() {
