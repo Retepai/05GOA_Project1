@@ -39,7 +39,7 @@
                     android:layout_width="347dp"
                     android:layout_height="57dp"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="503dp"
+                    android:layout_marginTop="557dp"
                     android:background="@drawable/rounded_rectangle1"
                     android:fontFamily="sans-serif"
                     android:text="Let's get started"
