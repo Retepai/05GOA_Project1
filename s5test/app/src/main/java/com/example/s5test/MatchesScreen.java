@@ -10,6 +10,7 @@ public class MatchesScreen extends AppCompatActivity {
 
     HumanitarianAdapter HumanitarianAdapter;
     FitnessAdapter FitnessAdapter;
+    ConstructionAdapter ConstructionAdapter;
     RecyclerView humanitarianAidRecyclerView;
     RecyclerView fitnessRecyclerView;
     RecyclerView constructionRecyclerView;
@@ -31,6 +32,9 @@ public class MatchesScreen extends AppCompatActivity {
 
         FitnessAdapter = new FitnessAdapter(this, MainActivity.fitnessList);
         fitnessRecyclerView.setAdapter(FitnessAdapter);
+
+        ConstructionAdapter = new ConstructionAdapter(this, MainActivity.constructionList);
+        constructionRecyclerView.setAdapter(ConstructionAdapter);
 
         humanitarianAidRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         fitnessRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));

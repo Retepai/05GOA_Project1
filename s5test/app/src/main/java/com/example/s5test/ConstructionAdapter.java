@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
+public class ConstructionAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
 
     Context context;
     ArrayList<Organization> opportunityCompactList;
 //    Organization currentOpportunity;
 
-    FitnessAdapter (@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
+    ConstructionAdapter (@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
         this.context = context;
         this.opportunityCompactList = opportunityCompactList;
     }
@@ -39,7 +39,7 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         holder.opportunityLocation.setText(organization.opportunityLocation);
         holder.organizationName.setText(organization.organizationName);
 //        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
-//        System.out.println(holder.opportunityApplyDate.toString());
+//        why is this garbag null object reference man
 
 //        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
 //            @Override
