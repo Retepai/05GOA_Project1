@@ -1,19 +1,15 @@
 package com.example.s5test;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
 public class MatchesScreen extends AppCompatActivity {
 
-    MatchesAdapter MatchesAdapter;
+    HumanitarianAdapter HumanitarianAdapter;
+    FitnessAdapter FitnessAdapter;
     RecyclerView humanitarianAidRecyclerView;
     RecyclerView fitnessRecyclerView;
     RecyclerView constructionRecyclerView;
@@ -22,7 +18,6 @@ public class MatchesScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.matches_screen);
-        System.out.println("SCREEN:" + MainActivity.opportunityList.size());
         setupRecyclerView();
     }
 
@@ -31,10 +26,11 @@ public class MatchesScreen extends AppCompatActivity {
         fitnessRecyclerView = findViewById(R.id.fitness_list_view);
         constructionRecyclerView = findViewById(R.id.construction_list_view);
 
-        MatchesAdapter = new MatchesAdapter(this,MainActivity.opportunityList);
-        humanitarianAidRecyclerView.setAdapter(MatchesAdapter);
-        fitnessRecyclerView.setAdapter(MatchesAdapter);
-        constructionRecyclerView.setAdapter(MatchesAdapter);
+        HumanitarianAdapter = new HumanitarianAdapter(this,MainActivity.humanitarianList);
+        humanitarianAidRecyclerView.setAdapter(HumanitarianAdapter);
+
+        FitnessAdapter = new FitnessAdapter(this, MainActivity.fitnessList);
+        fitnessRecyclerView.setAdapter(FitnessAdapter);
 
         humanitarianAidRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         fitnessRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));

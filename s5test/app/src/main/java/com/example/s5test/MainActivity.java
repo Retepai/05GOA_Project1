@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static ArrayList<Organization> opportunityList = new ArrayList<>();
+    public static ArrayList<Organization> humanitarianList = new ArrayList<>();
+    public static ArrayList<Organization> fitnessList = new ArrayList<>();
+    public static ArrayList<Organization> constructionList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         abcFoodBank.opportunityLocation = "Vancouver, B.C.";
         abcFoodBank.organizationName = "ABC Food Bank";
         abcFoodBank.opportunityApplyDate = "Start: Aug 10th";
-        opportunityList.add(abcFoodBank);
+        humanitarianList.add(abcFoodBank);
 
         Organization canadianRedCross = new Organization();
         canadianRedCross.opportunityLogo = R.drawable.opportunity_logo2;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         canadianRedCross.opportunityLocation = "Vancouver, B.C.";
         canadianRedCross.organizationName = "Canadian Red Cross";
         canadianRedCross.opportunityApplyDate = "Start: Apr 18th";
-        opportunityList.add(canadianRedCross);
+        humanitarianList.add(canadianRedCross);
 
         Organization salvationArmy = new Organization();
         salvationArmy.opportunityLogo = R.drawable.opportunity_logo3;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         salvationArmy.opportunityLocation = "Vancouver, B.C.";
         salvationArmy.organizationName = "Salvation Army";
         salvationArmy.opportunityApplyDate = "Start: Apr 22nd";
-        opportunityList.add(salvationArmy);
+        humanitarianList.add(salvationArmy);
 
         Organization defRunForHealth = new Organization();
         defRunForHealth.opportunityLogo = R.drawable.opportunity_logo4;
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         defRunForHealth.opportunityLocation = "Vancouver, B.C.";
         defRunForHealth.organizationName = "DEF Run for Health";
         defRunForHealth.opportunityApplyDate = "Start: Jun 15th";
-        opportunityList.add(defRunForHealth);
+        fitnessList.add(defRunForHealth);
 
         Organization mastersOfYoga = new Organization();
         mastersOfYoga.opportunityLogo = R.drawable.opportunity_logo5;
@@ -58,31 +60,39 @@ public class MainActivity extends AppCompatActivity {
         mastersOfYoga.opportunityLocation = "Vancouver, B.C.";
         mastersOfYoga.organizationName = "Masters Of Yoga";
         mastersOfYoga.opportunityApplyDate = "Start: Feb 9th";
-        opportunityList.add(mastersOfYoga);
+        fitnessList.add(mastersOfYoga);
 
         Organization buddhistsOfTaiChi = new Organization();
         buddhistsOfTaiChi.opportunityLogo = R.drawable.opportunity_logo6;
         buddhistsOfTaiChi.opportunityName = "Tai-Chi Instructor";
         buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
         buddhistsOfTaiChi.organizationName = "Buddhists of Tai-Chi";
-        buddhistsOfTaiChi.opportunityApplyDate = "Jun 20th";
-        opportunityList.add(buddhistsOfTaiChi);
+        buddhistsOfTaiChi.opportunityApplyDate = "Start: Jun 20th";
+        fitnessList.add(buddhistsOfTaiChi);
 
         Organization ghiHomes = new Organization();
         ghiHomes.opportunityLogo = R.drawable.opportunity_logo7;
-        ghiHomes.opportunityName = "Tai-Chi Instructor";
+        ghiHomes.opportunityName = "Home Builder";
         ghiHomes.opportunityLocation = "Vancouver, B.C.";
-        ghiHomes.organizationName = "Buddhists of Tai-Chi";
-        ghiHomes.opportunityApplyDate = "Start Mar 3rd";
-        opportunityList.add(ghiHomes);
+        ghiHomes.organizationName = "GHI Homes";
+        ghiHomes.opportunityApplyDate = "Start: Mar 3rd";
+        constructionList.add(ghiHomes);
 
         Organization gardenBuilders = new Organization();
-        gardenBuilders.opportunityLogo = R.drawable.opportunity_logo7;
-        gardenBuilders.opportunityName = "Tai-Chi Instructor";
+        gardenBuilders.opportunityLogo = R.drawable.opportunity_logo8;
+        gardenBuilders.opportunityName = "Gardenbed Building";
         gardenBuilders.opportunityLocation = "Vancouver, B.C.";
-        gardenBuilders.organizationName = "Buddhists of Tai-Chi";
-        gardenBuilders.opportunityApplyDate = "Start Oct 10th";
-        opportunityList.add(ghiHomes);
+        gardenBuilders.organizationName = "Garden Builders";
+        gardenBuilders.opportunityApplyDate = "Start: Oct 10th";
+        constructionList.add(gardenBuilders);
+
+        Organization rotaryFoundation = new Organization();
+        rotaryFoundation.opportunityLogo = R.drawable.opportunity_logo9;
+        rotaryFoundation.opportunityName = "Setup Helper";
+        rotaryFoundation.opportunityLocation = "Vancouver, B.C.";
+        rotaryFoundation.organizationName = "Rotary Foundation";
+        rotaryFoundation.opportunityApplyDate = "Start: May 11th";
+        constructionList.add(rotaryFoundation);
 
     }
 

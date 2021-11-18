@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
+public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
 
     Context context;
     ArrayList<Organization> opportunityCompactList;
-    Organization currentOpportunity;
+//    Organization currentOpportunity;
 
-    MatchesAdapter(@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
+    HumanitarianAdapter (@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
         this.context = context;
         this.opportunityCompactList = opportunityCompactList;
     }
@@ -38,17 +38,17 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         holder.opportunityName.setText(organization.opportunityName);
         holder.opportunityLocation.setText(organization.opportunityLocation);
         holder.organizationName.setText(organization.organizationName);
-        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
+//        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
-        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCurrentOpportunity(organization);
+//        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setCurrentOpportunity(organization);
 //                mainActivity.open_screen(new OrganizationScreen());
-
+//
 //                does setCurrentOpportunity method go inside the adapter or main activity?
-            }
-        });
+//            }
+//        });
     }
 
     public int getItemCount() {
@@ -58,9 +58,9 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         return opportunityCompactList.size();
     }
 
-    public void setCurrentOpportunity(Organization organization) {
-         currentOpportunity = organization;
-    }
+//    public void setCurrentOpportunity(Organization organization) {
+//         currentOpportunity = organization;
+//    }
 
 //    public getCurrentOpportunity() {
 //        return currentOpportunity;

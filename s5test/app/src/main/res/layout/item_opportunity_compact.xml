@@ -25,7 +25,7 @@
                 android:layout_height="64dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/opportunity_logo1" />
+                android:background="@drawable/opportunity_logo6" />
 
             <TextView
                 android:id="@+id/opportunity_name"
@@ -68,7 +68,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="184dp"
                 android:fontFamily="sans-serif"
-                android:text="Start: Aug 10th"
+                android:text="Start: Aug 21th"
                 android:textColor="#FF000000"
                 android:textSize="13sp" />
 
