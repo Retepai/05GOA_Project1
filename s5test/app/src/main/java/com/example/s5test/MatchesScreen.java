@@ -1,6 +1,10 @@
 package com.example.s5test;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,7 +23,21 @@ public class MatchesScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.matches_screen);
+
+        TextView matches_back_button = findViewById(R.id.matches_back_button);
+
+        matches_back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open_form2_screen();
+            }
+        });
         setupRecyclerView();
+    }
+
+    private void open_form2_screen() {
+        Intent open_form2_screen = new Intent(this, Form2Screen.class);
+        startActivity(open_form2_screen);
     }
 
     void setupRecyclerView() {
