@@ -14,7 +14,7 @@
             <ImageView
                 android:id="@+id/background"
                 android:layout_width="156dp"
-                android:layout_height="237dp"
+                android:layout_height="257dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/rectangle1" />
@@ -62,11 +62,22 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/organization_apply_date"
+                android:layout_width="124dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="184dp"
+                android:fontFamily="sans-serif"
+                android:text="Start: Aug 10th"
+                android:textColor="#FF000000"
+                android:textSize="13sp" />
+
+            <TextView
                 android:id="@+id/opportunity_apply"
                 android:layout_width="42dp"
                 android:layout_height="15dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="206dp"
+                android:layout_marginTop="226dp"
                 android:fontFamily="sans-serif"
                 android:text="APPLY"
                 android:textColor="#FF3a7cd2"

@@ -14,6 +14,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
 
     Context context;
     ArrayList<Organization> opportunityCompactList;
+    Organization currentOpportunity;
 
     MatchesAdapter(@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
         this.context = context;
@@ -37,15 +38,17 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         holder.opportunityName.setText(organization.opportunityName);
         holder.opportunityLocation.setText(organization.opportunityLocation);
         holder.organizationName.setText(organization.organizationName);
+        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mainActivity.setCurrentRestaurant(restaurant);
-//                mainActivity.open_screen(new RestaurantFragment());
-//            }
-//        });
-//    }
+        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setCurrentOpportunity(organization);
+//                mainActivity.open_screen(new OrganizationScreen());
+
+//                does setCurrentOpportunity method go inside the adapter or main activity?
+            }
+        });
     }
 
     public int getItemCount() {
@@ -54,4 +57,14 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         }
         return opportunityCompactList.size();
     }
+
+    public void setCurrentOpportunity(Organization organization) {
+         currentOpportunity = organization;
+    }
+
+//    public getCurrentOpportunity() {
+//        return currentOpportunity;
+//
+//        what is going on right now
+//    }
 }

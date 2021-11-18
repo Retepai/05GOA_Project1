@@ -25,27 +25,46 @@ public class MainActivity extends AppCompatActivity {
         abcFoodBank.opportunityName = "Food Bank Helper";
         abcFoodBank.opportunityLocation = "Vancouver, B.C.";
         abcFoodBank.organizationName = "ABC Food Bank";
+        abcFoodBank.opportunityApplyDate = "Start: Aug 10th";
         opportunityList.add(abcFoodBank);
 
-        Organization CIBC = new Organization();
-        CIBC.opportunityLogo = R.drawable.opportunity_logo1;
-        CIBC.opportunityName = "CIBC Burger Flipper";
-        CIBC.opportunityLocation = "Vancouver, B.C.";
-        CIBC.organizationName = "CIBC";
-        opportunityList.add(CIBC);
+        Organization canadianRedCross = new Organization();
+        canadianRedCross.opportunityLogo = R.drawable.opportunity_logo2;
+        canadianRedCross.opportunityName = "Supply Transporter";
+        canadianRedCross.opportunityLocation = "Vancouver, B.C.";
+        canadianRedCross.organizationName = "Canadian Red Cross";
+        canadianRedCross.opportunityApplyDate = "Start: Apr 18th";
+        opportunityList.add(canadianRedCross);
 
-        Organization riotGames = new Organization();
-        riotGames.opportunityLogo = R.drawable.opportunity_logo1;
-        riotGames.opportunityName = "VALORANT QA Tester";
-        riotGames.opportunityLocation = "L.A., California";
-        riotGames.organizationName = "Riot Games";
-        opportunityList.add(riotGames);
+        Organization salvationArmy = new Organization();
+        salvationArmy.opportunityLogo = R.drawable.opportunity_logo3;
+        salvationArmy.opportunityName = "Amateur Chef";
+        salvationArmy.opportunityLocation = "Vancouver, B.C.";
+        salvationArmy.organizationName = "Salvation Army";
+        salvationArmy.opportunityApplyDate = "Start: Apr 22nd";
+        opportunityList.add(salvationArmy);
 
-        Organization nathanBurgerShop = new Organization();
-        nathanBurgerShop.opportunityLogo = R.drawable.opportunity_logo1;
-        nathanBurgerShop.opportunityName = "Burger Taster #22";
-        nathanBurgerShop.opportunityLocation = "Richmond, B.C.";
-        nathanBurgerShop.organizationName = "NAHPOO BURGERS";
+        Organization defRunForHealth = new Organization();
+        defRunForHealth.opportunityLogo = R.drawable.opportunity_logo4;
+        defRunForHealth.opportunityName = "10K Runner";
+        defRunForHealth.opportunityLocation = "Vancouver, B.C.";
+        defRunForHealth.organizationName = "DEF Run for Health";
+        defRunForHealth.opportunityApplyDate = "Start: Jun 15th";
+        opportunityList.add(defRunForHealth);
+
+        Organization mastersOfYoga = new Organization();
+        mastersOfYoga.opportunityLogo = R.drawable.opportunity_logo5;
+        mastersOfYoga.opportunityName = "Yoga Instructor";
+        mastersOfYoga.opportunityLocation = "Vancouver, B.C.";
+        mastersOfYoga.organizationName = "Masters Of Yoga";
+        mastersOfYoga.opportunityApplyDate = "Start: Feb 9th";
+        opportunityList.add(mastersOfYoga);
+
+        Organization buddhistsOfTaiChi = new Organization();
+        buddhistsOfTaiChi.opportunityLogo = R.drawable.opportunity_logo1;
+        buddhistsOfTaiChi.opportunityName = "Tai-Chi Instructor";
+        buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
+        buddhistsOfTaiChi.organizationName = "NAHPOO BURGERS";
         opportunityList.add(nathanBurgerShop);
     }
 
