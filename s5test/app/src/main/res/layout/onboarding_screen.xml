@@ -20,18 +20,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="308dp"
-                    android:layout_height="365dp"
-                    android:layout_marginStart="103dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_width="340dp"
+                    android:layout_height="288dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="201dp"
                     android:background="@drawable/vinder_logo" />
 
                 <ImageView
                     android:id="@+id/vinder"
                     android:layout_width="162dp"
                     android:layout_height="73dp"
-                    android:layout_marginStart="211dp"
-                    android:layout_marginTop="400dp"
+                    android:layout_marginStart="125dp"
+                    android:layout_marginTop="51dp"
                     android:background="@drawable/vinder_name" />
 
                 <Button
@@ -46,6 +46,19 @@
                     android:textAllCaps="false"
                     android:textColor="#FFFFFFFF"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/the_easier_"
+                    android:layout_width="206dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="102dp"
+                    android:layout_marginTop="124dp"
+                    android:fontFamily="@font/public_sans"
+                    android:gravity="center_horizontal|top"
+                    android:text="The easier way to volunteer"
+                    android:textColor="@color/black" />
 
             </RelativeLayout>
 
