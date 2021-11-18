@@ -6,6 +6,7 @@ public class Organization {
     String opportunityName;
     String opportunityLocation;
     String organizationName;
+    String opportunityApplyDate;
     String opportunitydescription;
     String opportunityrequirements;
 

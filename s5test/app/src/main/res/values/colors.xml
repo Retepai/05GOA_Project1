@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#FFCCCCCC</color>
+    <color name="normal_grey">#FFDFDFDF</color>
     <color name="error_red">#FFD92C2C</color>
 </resources>

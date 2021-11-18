@@ -15,6 +15,8 @@ public class MatchesViewHolder extends RecyclerView.ViewHolder {
         opportunityName = itemView.findViewById(R.id.opportunity_name);
         opportunityLocation = itemView.findViewById(R.id.opportunity_location);
         organizationName = itemView.findViewById(R.id.organization_name);
+        opportunityApplyDate = itemView.findViewById(R.id.opportunity_apply_date);
+        opportunityApply = itemView.findViewById(R.id.opportunity_apply);
     }
 
     View itemView;
@@ -22,4 +24,6 @@ public class MatchesViewHolder extends RecyclerView.ViewHolder {
     TextView opportunityName;
     TextView opportunityLocation;
     TextView organizationName;
+    TextView opportunityApplyDate;
+    TextView opportunityApply;
 }

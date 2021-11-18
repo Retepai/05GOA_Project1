@@ -52,13 +52,25 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="35dp"
+                        android:layout_marginStart="36dp"
                         android:layout_marginTop="37dp"
                         android:fontFamily="sans-serif"
                         android:text="Days Available"
                         android:textColor="#FF000000"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/days_available_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/public_sans"
+                        android:text="Please select a day you are available."
+                        android:textColor="#D92C2C"
+                        android:textSize="13sp"
+                        android:visibility="gone"/>
 
                     <CheckBox
                         android:id="@+id/monday_checkbox"
@@ -141,14 +153,15 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/public_sans"
                     android:text="Main Interests"
@@ -159,18 +172,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="56dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/public_sans"
                     android:text="Select tags that are associated with your interests"
                     android:textColor="#FF333333"
                     android:textSize="13sp" />
 
+                <TextView
+                    android:id="@+id/interests_tags_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/public_sans"
+                    android:text="Please select a tag."
+                    android:textColor="#D92C2C"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
                 <LinearLayout
+                    android:id="@+id/tags_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="85dp">
+                    android:layout_marginTop="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -358,7 +384,7 @@
 
                 </LinearLayout>
 
-            </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
 

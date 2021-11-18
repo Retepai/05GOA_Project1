@@ -19,13 +19,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <TextView
                     android:id="@+id/matches_back_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="26dp"
-                    android:layout_marginTop="43dp"
-                    android:background="@drawable/back_button1" />
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="@font/public_sans"
+                    android:text="Back"
+                    android:textColor="#FF000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,7 +102,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -112,32 +116,27 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="237dp"
-                    android:layout_marginTop="77dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="77dp"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/humanitarian_aid_list_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="0dp">
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/humanitarian_aid_list_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-                    </LinearLayout>
-
-                </HorizontalScrollView>
+                </LinearLayout>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -151,32 +150,28 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="237dp"
-                    android:layout_marginTop="77dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="0dp">
+                        android:layout_marginTop="77dp"
+                        android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             android:id="@+id/fitness_list_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"/>
+                            android:layout_marginTop="0dp"
+                            android:orientation="horizontal"/>
 
                     </LinearLayout>
-
-                </HorizontalScrollView>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="100dp">
 
@@ -191,27 +186,22 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="237dp"
-                    android:layout_marginTop="77dp">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="0dp">
+                        android:layout_marginTop="77dp"
+                        android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             android:id="@+id/construction_list_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"/>
+                            android:layout_marginTop="0dp"
+                            android:orientation="horizontal"/>
 
                     </LinearLayout>
-
-                </HorizontalScrollView>
 
             </RelativeLayout>
 
