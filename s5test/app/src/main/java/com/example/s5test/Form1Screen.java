@@ -132,9 +132,9 @@ public class Form1Screen extends AppCompatActivity {
                 }
 
                 if (ageCriteriaFilled && cityCriteriaFilled && radioCriteriaFilled && languagesCriteriaFilled) {
-                    city_edit_text.getText().clear();
-                    age_edit_text.getText().clear();
-                    drivers_licence_radio_group.clearCheck();
+//                    city_edit_text.getText().clear();
+//                    age_edit_text.getText().clear();
+//                    drivers_licence_radio_group.clearCheck();
                     open_form2_screen();
                 }
             }
@@ -152,22 +152,22 @@ public class Form1Screen extends AppCompatActivity {
             });
         }
 
-        get_wet_certification.setOnClickListener(v -> checkActivation(get_wet_certification,0));
-        first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0));
-        food_safe_certification.setOnClickListener(v -> checkActivation(food_safe_certification,0));
-        forklift_operator_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0));
-        babysitting_certification.setOnClickListener(v -> checkActivation(babysitting_certification,0));
+        get_wet_certification.setOnClickListener(v -> checkActivation(get_wet_certification,0,language_tag_error));
+        first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0,language_tag_error));
+        food_safe_certification.setOnClickListener(v -> checkActivation(food_safe_certification,0,language_tag_error));
+        forklift_operator_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0,language_tag_error));
+        babysitting_certification.setOnClickListener(v -> checkActivation(babysitting_certification,0,language_tag_error));
 
-        english_language.setOnClickListener(v -> checkActivation(english_language,1));
-        japanese_language.setOnClickListener(v -> checkActivation(japanese_language,1));
-        french_language.setOnClickListener(v -> checkActivation(french_language,1));
-        russian_language.setOnClickListener(v -> checkActivation(russian_language,1));
-        portuguese_language.setOnClickListener(v -> checkActivation(portuguese_language,1));
-        hindi_language.setOnClickListener(v -> checkActivation(hindi_language,1));
-        korean_language.setOnClickListener(v -> checkActivation(korean_language,1));
-        german_language.setOnClickListener(v -> checkActivation(german_language,1));
-        spanish_language.setOnClickListener(v -> checkActivation(spanish_language,1));
-        chinese_language.setOnClickListener(v -> checkActivation(chinese_language,1));
+        english_language.setOnClickListener(v -> checkActivation(english_language,1,language_tag_error));
+        japanese_language.setOnClickListener(v -> checkActivation(japanese_language,1,language_tag_error));
+        french_language.setOnClickListener(v -> checkActivation(french_language,1,language_tag_error));
+        russian_language.setOnClickListener(v -> checkActivation(russian_language,1,language_tag_error));
+        portuguese_language.setOnClickListener(v -> checkActivation(portuguese_language,1,language_tag_error));
+        hindi_language.setOnClickListener(v -> checkActivation(hindi_language,1,language_tag_error));
+        korean_language.setOnClickListener(v -> checkActivation(korean_language,1,language_tag_error));
+        german_language.setOnClickListener(v -> checkActivation(german_language,1,language_tag_error));
+        spanish_language.setOnClickListener(v -> checkActivation(spanish_language,1,language_tag_error));
+        chinese_language.setOnClickListener(v -> checkActivation(chinese_language,1,language_tag_error));
     }
 
     private void open_form2_screen() {
@@ -175,10 +175,9 @@ public class Form1Screen extends AppCompatActivity {
         startActivity(open_form2_screen);
     }
 
-    private void checkActivation(Button b, int type) {
+    private void checkActivation(Button b, int type, TextView msg) {
         // type: 0 = cert, 1 = lang
         if (b.isActivated()) {
-//            System.out.println(b.getId() + " activated -> deactivated");
             b.setBackgroundResource(R.drawable.rounded_rectangle3);
             b.setActivated(false);
             if (type == 0) {
@@ -189,13 +188,14 @@ public class Form1Screen extends AppCompatActivity {
             }
         }
         else {
-//            System.out.println(b.getId() + " deactivated -> activated");
             b.setBackgroundResource(R.drawable.rounded_rectangle1);
             b.setActivated(true);
             if (type == 0) {
                 certifications.add(Integer.toString(b.getId()));
             }
             else {
+                // language tag error will only show if no language tags are selected
+                msg.setVisibility(View.GONE);
                 languages.add(Integer.toString(b.getId()));
             }
         }
