@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         seniorAssistance.opportunityLocation = "Vancouver, B.C.";
         seniorAssistance.organizationName = "N/A";
         seniorAssistance.opportunityApplyDate = "Start: May 11th";
+        // ---------- for expanded opporutunites -------------------
         seniorAssistance.opportunityExpandedDate = "Start by: May 11th";
         seniorAssistance.opportunityRequirements.add("Be 16 years or older");
         seniorAssistance.opportunityRequirements.add("Have previous customer service skills");
