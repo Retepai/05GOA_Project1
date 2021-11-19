@@ -84,29 +84,23 @@ public class Form2Screen extends AppCompatActivity {
             }
         });
 
-        for (CheckBox box : checkList) {
-            box.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    for (CheckBox round2 : checkList) {
-                        round2.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.teal_700)));
-                    }
-                    days_error_msg.setVisibility(View.GONE);
-                }
-            });
-        }
+        business_b.setOnClickListener(v -> checkActivation(business_b,interests_error_msg));
+        arts_b.setOnClickListener(v -> checkActivation(arts_b,interests_error_msg));
+        autos_b.setOnClickListener(v -> checkActivation(autos_b,interests_error_msg));
+        comp_b.setOnClickListener(v -> checkActivation(comp_b,interests_error_msg));
+        finance_b.setOnClickListener(v -> checkActivation(finance_b,interests_error_msg));
+        games_b.setOnClickListener(v -> checkActivation(games_b,interests_error_msg));
+        fitness_b.setOnClickListener(v -> checkActivation(fitness_b,interests_error_msg));
+        books_b.setOnClickListener(v -> checkActivation(books_b,interests_error_msg));
+        home_b.setOnClickListener(v -> checkActivation(home_b,interests_error_msg));
+        human_b.setOnClickListener(v -> checkActivation(human_b,interests_error_msg));
+        construct_b.setOnClickListener(v -> checkActivation(construct_b,interests_error_msg));
 
-        business_b.setOnClickListener(v -> checkActivation(business_b));
-        arts_b.setOnClickListener(v -> checkActivation(arts_b));
-        autos_b.setOnClickListener(v -> checkActivation(autos_b));
-        comp_b.setOnClickListener(v -> checkActivation(comp_b));
-        finance_b.setOnClickListener(v -> checkActivation(finance_b));
-        games_b.setOnClickListener(v -> checkActivation(games_b));
-        fitness_b.setOnClickListener(v -> checkActivation(fitness_b));
-        books_b.setOnClickListener(v -> checkActivation(books_b));
-        home_b.setOnClickListener(v -> checkActivation(home_b));
-        human_b.setOnClickListener(v -> checkActivation(human_b));
-        construct_b.setOnClickListener(v -> checkActivation(construct_b));
+        for (CheckBox box : checkList) {
+            box.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_blue)));
+            box.setChecked(true);
+            box.setOnClickListener(v -> resetButtonColors(checkList,days_error_msg));
+        }
     }
 
     private void open_matches_screen() {
@@ -114,13 +108,14 @@ public class Form2Screen extends AppCompatActivity {
         startActivity(open_matches_screen);
     }
 
-    private void checkActivation(Button b) {
+    private void checkActivation(Button b, TextView msg) {
         if (b.isActivated()) {
             b.setBackgroundResource(R.drawable.rounded_rectangle3);
             b.setActivated(false);
             tags.remove(Integer.toString(b.getId()));
         }
         else {
+            msg.setVisibility(View.GONE);
             b.setBackgroundResource(R.drawable.rounded_rectangle1);
             b.setActivated(true);
             tags.add(Integer.toString(b.getId()));
@@ -134,5 +129,12 @@ public class Form2Screen extends AppCompatActivity {
             }
         }
         return true;
+    }
+
+    private void resetButtonColors(ArrayList<CheckBox> arr1, TextView msg) {
+        for (CheckBox box : arr1) {
+            box.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_blue)));
+        }
+        msg.setVisibility(View.GONE);
     }
 }

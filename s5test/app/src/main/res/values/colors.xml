@@ -10,4 +10,5 @@
     <color name="grey">#FFCCCCCC</color>
     <color name="normal_grey">#FFDFDFDF</color>
     <color name="error_red">#FFD92C2C</color>
+    <color name="default_blue">#3A7CD2</color>
 </resources>

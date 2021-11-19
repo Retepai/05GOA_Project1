@@ -52,7 +52,6 @@
                     android:layout_width="411dp"
                     android:layout_height="56dp"
                     android:layout_marginStart="0dp"
-<<<<<<< Updated upstream
                     android:layout_marginTop="69dp"
                     android:background="@drawable/rectangle1" />
 
@@ -62,10 +61,8 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="126dp"
                     android:background="@drawable/rectangle3"  />
-=======
                     android:layout_marginTop="93dp"
                     android:background="@drawable/rectangle2" />
->>>>>>> Stashed changes
 
                 <TextView
                     android:id="@+id/opportunity_apply_date"
