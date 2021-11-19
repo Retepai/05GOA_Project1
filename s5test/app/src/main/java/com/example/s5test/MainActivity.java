@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         abcFoodBank.opportunityName = "Food Bank Helper";
         abcFoodBank.opportunityLocation = "Vancouver, B.C.";
         abcFoodBank.organizationName = "ABC Food Bank";
+        abcFoodBank.opportunityApplyDeadline = "Application closes Aug 3rd, 2021";
         abcFoodBank.opportunityApplyDate = "Start: Aug 10th";
         abcFoodBank.opportunityExpandedDate = "Start by: Aug 10th";
         abcFoodBank.opportunityRequirements.add("Be 16 years or older.");
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         canadianRedCross.opportunityName = "Supply Transporter";
         canadianRedCross.opportunityLocation = "Vancouver, B.C.";
         canadianRedCross.organizationName = "Canadian Red Cross";
+        canadianRedCross.opportunityApplyDeadline = "Application closes Apr 11th, 2021";
         canadianRedCross.opportunityApplyDate = "Start: Apr 18th";
         canadianRedCross.opportunityExpandedDate = "Start by: Apr 18th";
         canadianRedCross.opportunityRequirements.add("Have a Class 5 Drivers License.");
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         salvationArmy.opportunityName = "Amateur Chef";
         salvationArmy.opportunityLocation = "Vancouver, B.C.";
         salvationArmy.organizationName = "Salvation Army";
+        salvationArmy.opportunityApplyDeadline = "Application closes Apr 15th, 2021";
         salvationArmy.opportunityApplyDate = "Start: Apr 22nd";
         salvationArmy.opportunityExpandedDate = "Start by: Apr 22nd";
         salvationArmy.opportunityRequirements.add("Have a kitchen-safe certification.");
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         defRunForHealth.opportunityName = "10K Runner";
         defRunForHealth.opportunityLocation = "Vancouver, B.C.";
         defRunForHealth.organizationName = "DEF Run for Health";
+        defRunForHealth.opportunityApplyDeadline = "Application closes Jun 8th, 2021";
         defRunForHealth.opportunityApplyDate = "Start: Jun 15th";
         defRunForHealth.opportunityExpandedDate = "Start by: Jun 15th";
         defRunForHealth.opportunityRequirements.add("Be 16 years or older.");
@@ -90,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mastersOfYoga.opportunityName = "Yoga Instructor";
         mastersOfYoga.opportunityLocation = "Vancouver, B.C.";
         mastersOfYoga.organizationName = "Masters Of Yoga";
+        mastersOfYoga.opportunityApplyDeadline = "Application closes Feb 1st, 2021";
         mastersOfYoga.opportunityApplyDate = "Start: Feb 9th";
         mastersOfYoga.opportunityExpandedDate = "Start by: Feb 9th";
         mastersOfYoga.opportunityRequirements.add("Be able to communicate well with others.");
@@ -104,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         buddhistsOfTaiChi.opportunityName = "Tai-Chi Instructor";
         buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
         buddhistsOfTaiChi.organizationName = "Buddhists of Tai-Chi";
+        buddhistsOfTaiChi.opportunityApplyDeadline = "Application closes Jun 13th, 2021";
         buddhistsOfTaiChi.opportunityApplyDate = "Start: Jun 20th";
         buddhistsOfTaiChi.opportunityExpandedDate = "Start by: Jun 20th";
         buddhistsOfTaiChi.opportunityRequirements.add("Be 16 years or older.");
@@ -119,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         ghiHomes.opportunityName = "Home Builder";
         ghiHomes.opportunityLocation = "Vancouver, B.C.";
         ghiHomes.organizationName = "GHI Homes";
+        ghiHomes.opportunityApplyDeadline = "Application closes Feb 24th, 2021";
         ghiHomes.opportunityApplyDate = "Start: Mar 3rd";
         ghiHomes.opportunityExpandedDate = "Start by: Mar 3rd";
         ghiHomes.opportunityRequirements.add("Possess a worksite-safe certificate.");
@@ -134,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         gardenBuilders.opportunityName = "Garden bed Building";
         gardenBuilders.opportunityLocation = "Vancouver, B.C.";
         gardenBuilders.organizationName = "Garden Builders";
+        gardenBuilders.opportunityApplyDeadline = "Application closes Oct 3rd, 2021";
         gardenBuilders.opportunityApplyDate = "Start: Oct 10th";
         gardenBuilders.opportunityExpandedDate = "Start by: Oct 10th";
         gardenBuilders.opportunityRequirements.add("Have common knowledge of agriculture tools.");
@@ -148,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
         rotaryFoundation.opportunityName = "Setup Helper";
         rotaryFoundation.opportunityLocation = "Vancouver, B.C.";
         rotaryFoundation.organizationName = "Rotary Foundation";
+        rotaryFoundation.opportunityApplyDeadline = "Application closes May 4th, 2021";
         rotaryFoundation.opportunityApplyDate = "Start: May 11th";
         rotaryFoundation.opportunityExpandedDate = "Start by: May 11th";
         rotaryFoundation.opportunityRequirements.add("Be 16 years or older");
@@ -158,24 +167,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         seniorAssistance.opportunityLogo = R.drawable.opportunity_image_group10;
+        seniorAssistance.opportunityExpandedLogo = R.drawable.opportunity_image_group10;
         seniorAssistance.opportunityName = "Senior Assistance";
         seniorAssistance.opportunityLocation = "Vancouver, B.C.";
         seniorAssistance.organizationName = "N/A";
-        seniorAssistance.opportunityApplyDate = "Start: May 11th";
+        seniorAssistance.opportunityApplyDeadline = "Application closes Jul 19th, 2021";
+        seniorAssistance.opportunityApplyDate = "Start: Jul 26th";
         // ---------- for expanded opportunities -------------------
-        seniorAssistance.opportunityExpandedDate = "Start by: May 11th";
+        seniorAssistance.opportunityExpandedDate = "Start by: Jul 26th";
         seniorAssistance.opportunityRequirements.add("Be 16 years or older");
         seniorAssistance.opportunityRequirements.add("Have previous customer service skills");
         seniorAssistance.opportunityRequirements.add("Talk and engage with residents");
         seniorAssistance.opportunityShortDescription = "Help assist elders in your community Vancouver, B.C. Wisteria Senior’s Home";
         seniorAssistance.opportunityDescription = "Wisteria Place is an innovative seniors’ living community in the spectacular waterfront community of Steveston, BC. At Wisteria Place, we provide activities and facilitate connections between our residents and the community, to help foster a sense of purpose. We are a community hub. We connect cultures.";
-
-
-
-
-
-
-
 
     }
 
