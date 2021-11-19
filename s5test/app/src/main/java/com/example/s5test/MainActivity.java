@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         constructionList.add(rotaryFoundation);
 
 
-        seniorAssistance.opportunityLogo = R.drawable.recommended_match_picture1;
+        seniorAssistance.opportunityLogo = R.drawable.opportunity_image_group10;
         seniorAssistance.opportunityName = "Senior Assistance";
         seniorAssistance.opportunityLocation = "Vancouver, B.C.";
         seniorAssistance.organizationName = "N/A";
