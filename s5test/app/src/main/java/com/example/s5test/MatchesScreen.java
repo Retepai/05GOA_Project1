@@ -25,6 +25,7 @@ public class MatchesScreen extends AppCompatActivity {
         setContentView(R.layout.matches_screen);
 
         TextView matches_back_button = findViewById(R.id.matches_back_button);
+        Button senior_apply_button = findViewById(R.id.senior_apply_button);
 
         matches_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,15 @@ public class MatchesScreen extends AppCompatActivity {
                 open_form2_screen();
             }
         });
+
+        senior_apply_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.currentOrg = MainActivity.seniorAssistance;
+                open_org_screen();
+            }
+        });
+
         setupRecyclerView();
     }
 
@@ -57,5 +67,10 @@ public class MatchesScreen extends AppCompatActivity {
         humanitarianAidRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         fitnessRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         constructionRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+    }
+
+    private void open_org_screen() {
+        Intent open_org_screen = new Intent(this, OrganizationScreen.class);
+        startActivity(open_org_screen);
     }
 }

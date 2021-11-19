@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.S5test">
+        <activity android:name=".OrganizationScreen"/>
         <activity android:name=".Form1Screen"/>
         <activity android:name=".Form2Screen"/>
         <activity android:name=".MatchesScreen"/>

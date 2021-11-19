@@ -1,6 +1,8 @@
 package com.example.s5test;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +16,6 @@ public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>
 
     Context context;
     ArrayList<Organization> opportunityCompactList;
-//    Organization currentOpportunity;
 
     HumanitarianAdapter (@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
         this.context = context;
@@ -31,7 +32,7 @@ public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MatchesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MatchesViewHolder holder, @SuppressLint("RecyclerView") int position) {
         // Taking information from opportunityCompactList and populating recycler view with specific data from each organization
         Organization organization = opportunityCompactList.get(position);
         holder.opportunityLogo.setImageResource(organization.opportunityLogo);
@@ -40,15 +41,13 @@ public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>
         holder.organizationName.setText(organization.organizationName);
         holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
-//        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                setCurrentOpportunity(organization);
-//                mainActivity.open_screen(new OrganizationScreen());
-//
-//                does setCurrentOpportunity method go inside the adapter or main activity?
-//            }
-//        });
+        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.currentOrg = opportunityCompactList.get(position);
+                open_org_screen();
+            }
+        });
     }
 
     public int getItemCount() {
@@ -58,13 +57,8 @@ public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>
         return opportunityCompactList.size();
     }
 
-//    public void setCurrentOpportunity(Organization organization) {
-//         currentOpportunity = organization;
-//    }
-
-//    public getCurrentOpportunity() {
-//        return currentOpportunity;
-//
-//        what is going on right now
-//    }
+    private void open_org_screen() {
+        Intent open_org_screen = new Intent(this.context, OrganizationScreen.class);
+        this.context.startActivity(open_org_screen);
+    }
 }

@@ -53,6 +53,7 @@
                     android:textStyle="bold"/>
 
                 <Button
+                    android:id="@+id/senior_apply_button"
                     android:layout_width="63dp"
                     android:layout_height="38dp"
                     android:layout_marginStart="318dp"

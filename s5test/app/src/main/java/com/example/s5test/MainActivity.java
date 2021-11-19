@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     public static ArrayList<Organization> fitnessList = new ArrayList<>();
     public static ArrayList<Organization> constructionList = new ArrayList<>();
 
+    public static Organization currentOrg = new Organization();
+    public static Organization seniorAssistance = new Organization();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
         rotaryFoundation.opportunityApplyDate = "Start: May 11th";
         constructionList.add(rotaryFoundation);
 
+        seniorAssistance.opportunityLogo = R.drawable.recommended_match_picture1;
+        seniorAssistance.opportunityName = "Senior Assistance";
+        seniorAssistance.opportunityLocation = "Vancouver, B.C.";
+        seniorAssistance.organizationName = "N/A";
+        seniorAssistance.opportunityApplyDate = "Start: May 11th";
+        seniorAssistance.opportunityExpandedDate = "Start by: May 11th";
+        seniorAssistance.opportunityRequirements.add("Be 16 years or older");
+        seniorAssistance.opportunityRequirements.add("Have previous customer service skills");
+        seniorAssistance.opportunityRequirements.add("Talk and engage with residents");
+        seniorAssistance.opportunityShortDescription = "Help assist elders in your community Vancouver, B.C. Wisteria Senior’s Home";
+        seniorAssistance.opportunityDescription = "Wisteria Place is an innovative seniors’ living community in the spectacular waterfront community of Steveston, BC. At Wisteria Place, we provide activities and facilitate connections between our residents and the community, to help foster a sense of purpose. We are a community hub. We connect cultures.";
     }
 
     private void open_on_boarding_screen() {

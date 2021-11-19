@@ -1,5 +1,7 @@
 package com.example.s5test;
 
+import java.util.ArrayList;
+
 public class Organization {
 
     int opportunityLogo;
@@ -7,8 +9,11 @@ public class Organization {
     String opportunityLocation;
     String organizationName;
     String opportunityApplyDate;
-    String opportunitydescription;
-    String opportunityrequirements;
+
+    String opportunityExpandedDate;
+    String opportunityShortDescription;
+    String opportunityDescription;
+    ArrayList<String> opportunityRequirements = new ArrayList<>();
 
     public Organization(){
     }

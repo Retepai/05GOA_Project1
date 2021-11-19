@@ -1,6 +1,7 @@
 package com.example.s5test;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,6 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
 
     Context context;
     ArrayList<Organization> opportunityCompactList;
-//    Organization currentOpportunity;
 
     FitnessAdapter (@NonNull Context context, @NonNull ArrayList<Organization> opportunityCompactList) {
         this.context = context;
@@ -40,15 +40,13 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         holder.organizationName.setText(organization.organizationName);
         holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
-//        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                setCurrentOpportunity(organization);
-//                mainActivity.open_screen(new OrganizationScreen());
-//
-//                does setCurrentOpportunity method go inside the adapter or main activity?
-//            }
-//        });
+        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.currentOrg = opportunityCompactList.get(position);
+                open_org_screen();
+            }
+        });
     }
 
     public int getItemCount() {
@@ -58,12 +56,8 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         return opportunityCompactList.size();
     }
 
-//    public void setCurrentOpportunity(Organization organization) {
-//         currentOpportunity = organization;
-//    }
-
-//    public getCurrentOpportunity() {
-//        return currentOpportunity;
-//
-//    }
+    private void open_org_screen() {
+        Intent open_org_screen = new Intent(this.context, OrganizationScreen.class);
+        this.context.startActivity(open_org_screen);
+    }
 }

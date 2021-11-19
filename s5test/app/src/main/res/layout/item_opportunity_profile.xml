@@ -91,6 +91,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/opportunity_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -102,6 +103,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/opportunity_location"
                     android:layout_width="347dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -112,12 +114,24 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/opportunity_short_description"
                     android:layout_width="347dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="0dp"
                     android:fontFamily="sans-serif"
                     android:text="Participate in our 10K run as a volunteer to help us raise money for medical research."
+                    android:textColor="#FF4D4D4D"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/opportunity_expanded_date"
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Start by: Jun 15th"
                     android:textColor="#FF4D4D4D"
                     android:textSize="16sp" />
 
@@ -160,25 +174,22 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="347dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="sans-serif"
-                    android:text="- Be 16 years or older"
-                    android:textColor="#FF4D4D4D"
-                    android:textSize="16sp" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="347dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="0dp"
-                    android:fontFamily="sans-serif"
-                    android:text="- Wear appropriate clothing for all weather conditions"
-                    android:textColor="#FF4D4D4D"
-                    android:textSize="16sp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/requirements_list_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -194,13 +205,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="210dp"
                 android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginStart="0dp"
-                    android:background="@drawable/rectangle3"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -228,6 +232,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/opportunity_description"
                     android:layout_width="347dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
