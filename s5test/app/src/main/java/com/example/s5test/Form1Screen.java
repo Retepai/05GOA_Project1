@@ -156,7 +156,7 @@ public class Form1Screen extends AppCompatActivity {
         first_aid_certification.setOnClickListener(v -> checkActivation(first_aid_certification,0));
         food_safe_certification.setOnClickListener(v -> checkActivation(food_safe_certification,0));
         forklift_operator_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0));
-        babysitting_certification.setOnClickListener(v -> checkActivation(forklift_operator_certification,0));
+        babysitting_certification.setOnClickListener(v -> checkActivation(babysitting_certification,0));
 
         english_language.setOnClickListener(v -> checkActivation(english_language,1));
         japanese_language.setOnClickListener(v -> checkActivation(japanese_language,1));
