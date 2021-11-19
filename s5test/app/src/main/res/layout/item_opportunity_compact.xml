@@ -62,7 +62,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/organization_apply_date"
+                android:id="@+id/opportunity_apply_date"
                 android:layout_width="124dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="16dp"
