@@ -43,7 +43,7 @@
 
                 <ImageView
                     android:layout_width="411dp"
-                    android:layout_height="2px"
+                    android:layout_height="5px"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="68dp"
                     android:background="@drawable/rectangle3"  />
@@ -57,15 +57,13 @@
 
                 <ImageView
                     android:layout_width="411dp"
-                    android:layout_height="2px"
+                    android:layout_height="5px"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="126dp"
                     android:background="@drawable/rectangle3"  />
-                    android:layout_marginTop="93dp"
-                    android:background="@drawable/rectangle2" />
 
                 <TextView
-                    android:id="@+id/opportunity_apply_date"
+                    android:id="@+id/opportunity_apply_deadline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="116dp"

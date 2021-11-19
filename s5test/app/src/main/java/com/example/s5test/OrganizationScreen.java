@@ -3,13 +3,11 @@ package com.example.s5test;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +35,7 @@ public class OrganizationScreen extends AppCompatActivity{
         TextView opportunity_description = findViewById(R.id.opportunity_description);
         Button submit_button = findViewById(R.id.submit_form_button);
 
-        opportunity_image.setImageResource(currentOrg.opportunityLogo);
+        opportunity_image.setImageResource(currentOrg.opportunityExpandedLogo);
         opportunity_name.setText(currentOrg.opportunityName);
         opportunity_location.setText(currentOrg.opportunityLocation);
         opportunity_expanded_date.setText(currentOrg.opportunityExpandedDate);
@@ -50,7 +48,6 @@ public class OrganizationScreen extends AppCompatActivity{
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText(clipText,employerEmail);
                 clipboard.setPrimaryClip(clip);
-//                Toast.makeText(getApplicationContext(),clipText,Toast.LENGTH_SHORT).show();
                 alertPopup(OrganizationScreen.this);
             }
         });
@@ -72,7 +69,7 @@ public class OrganizationScreen extends AppCompatActivity{
                 .setTitle("Success!")
                 .setMessage(clipText)
                 .setPositiveButton("OK",null)
-                .setIcon(R.drawable.vinder_logo)
+                .setIcon(R.drawable.check)
                 .show();
     }
 }

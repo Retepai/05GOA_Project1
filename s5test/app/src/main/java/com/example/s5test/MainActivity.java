@@ -27,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
     void populateDataModel() {
         Organization abcFoodBank = new Organization();
         abcFoodBank.opportunityLogo = R.drawable.opportunity_logo1;
+        abcFoodBank.opportunityExpandedLogo = R.drawable.opportunity_image_group1;
         abcFoodBank.opportunityName = "Food Bank Helper";
         abcFoodBank.opportunityLocation = "Vancouver, B.C.";
         abcFoodBank.organizationName = "ABC Food Bank";
         abcFoodBank.opportunityApplyDate = "Start: Aug 10th";
+        abcFoodBank.opportunityExpandedDate = "Start by: Aug 10th";
         abcFoodBank.opportunityRequirements.add("Be 16 years or older.");
         abcFoodBank.opportunityRequirements.add("Pass a criminal background check.");
         abcFoodBank.opportunityRequirements.add("Be able to work together and be compassionate towards.");
@@ -40,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization canadianRedCross = new Organization();
         canadianRedCross.opportunityLogo = R.drawable.opportunity_logo2;
+        canadianRedCross.opportunityExpandedLogo = R.drawable.opportunity_image_group2;
         canadianRedCross.opportunityName = "Supply Transporter";
         canadianRedCross.opportunityLocation = "Vancouver, B.C.";
         canadianRedCross.organizationName = "Canadian Red Cross";
         canadianRedCross.opportunityApplyDate = "Start: Apr 18th";
+        canadianRedCross.opportunityExpandedDate = "Start by: Apr 18th";
         canadianRedCross.opportunityRequirements.add("Have a Class 5 Drivers License.");
         canadianRedCross.opportunityRequirements.add("Be able to volunteer for 3+ hours in a day.");
         canadianRedCross.opportunityRequirements.add("Pass a Criminal Background Check.");
@@ -53,10 +57,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization salvationArmy = new Organization();
         salvationArmy.opportunityLogo = R.drawable.opportunity_logo3;
+        salvationArmy.opportunityExpandedLogo = R.drawable.opportunity_image_group3;
         salvationArmy.opportunityName = "Amateur Chef";
         salvationArmy.opportunityLocation = "Vancouver, B.C.";
         salvationArmy.organizationName = "Salvation Army";
         salvationArmy.opportunityApplyDate = "Start: Apr 22nd";
+        salvationArmy.opportunityExpandedDate = "Start by: Apr 22nd";
         salvationArmy.opportunityRequirements.add("Have a kitchen-safe certification.");
         salvationArmy.opportunityRequirements.add("Be able to work proficiently with kitchen tools.");
         salvationArmy.opportunityRequirements.add("Be at least 19 or older.");
@@ -66,10 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization defRunForHealth = new Organization();
         defRunForHealth.opportunityLogo = R.drawable.opportunity_logo4;
+        defRunForHealth.opportunityExpandedLogo = R.drawable.opportunity_image_group4;
         defRunForHealth.opportunityName = "10K Runner";
         defRunForHealth.opportunityLocation = "Vancouver, B.C.";
         defRunForHealth.organizationName = "DEF Run for Health";
         defRunForHealth.opportunityApplyDate = "Start: Jun 15th";
+        defRunForHealth.opportunityExpandedDate = "Start by: Jun 15th";
         defRunForHealth.opportunityRequirements.add("Be 16 years or older.");
         defRunForHealth.opportunityRequirements.add("Wear appropriate clothing for all weather conditions.");
         defRunForHealth.opportunityShortDescription = "Participate in our 10K run as a volunteer to help us raise money for medical research.";
@@ -78,10 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization mastersOfYoga = new Organization();
         mastersOfYoga.opportunityLogo = R.drawable.opportunity_logo5;
+        mastersOfYoga.opportunityExpandedLogo = R.drawable.opportunity_image_group5;
         mastersOfYoga.opportunityName = "Yoga Instructor";
         mastersOfYoga.opportunityLocation = "Vancouver, B.C.";
         mastersOfYoga.organizationName = "Masters Of Yoga";
         mastersOfYoga.opportunityApplyDate = "Start: Feb 9th";
+        mastersOfYoga.opportunityExpandedDate = "Start by: Feb 9th";
         mastersOfYoga.opportunityRequirements.add("Be able to communicate well with others.");
         mastersOfYoga.opportunityRequirements.add("Have a First-Aid/CPR certification.");
         mastersOfYoga.opportunityShortDescription = "Volunteer to teach yoga to different and diverse groups of people.";
@@ -90,10 +100,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization buddhistsOfTaiChi = new Organization();
         buddhistsOfTaiChi.opportunityLogo = R.drawable.opportunity_logo6;
+        buddhistsOfTaiChi.opportunityExpandedLogo = R.drawable.opportunity_image_group6;
         buddhistsOfTaiChi.opportunityName = "Tai-Chi Instructor";
         buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
         buddhistsOfTaiChi.organizationName = "Buddhists of Tai-Chi";
         buddhistsOfTaiChi.opportunityApplyDate = "Start: Jun 20th";
+        buddhistsOfTaiChi.opportunityExpandedDate = "Start by: Jun 20th";
         buddhistsOfTaiChi.opportunityRequirements.add("Be 16 years or older.");
         buddhistsOfTaiChi.opportunityRequirements.add("Wear appropriate clothing for all weather conditions.");
         buddhistsOfTaiChi.opportunityRequirements.add("Have some sort of previous construction experience.");
@@ -103,10 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization ghiHomes = new Organization();
         ghiHomes.opportunityLogo = R.drawable.opportunity_logo7;
+        ghiHomes.opportunityExpandedLogo = R.drawable.opportunity_image_group7;
         ghiHomes.opportunityName = "Home Builder";
         ghiHomes.opportunityLocation = "Vancouver, B.C.";
         ghiHomes.organizationName = "GHI Homes";
         ghiHomes.opportunityApplyDate = "Start: Mar 3rd";
+        ghiHomes.opportunityExpandedDate = "Start by: Mar 3rd";
         ghiHomes.opportunityRequirements.add("Possess a worksite-safe certificate.");
         ghiHomes.opportunityRequirements.add("Be at least 18 years or older.");
         ghiHomes.opportunityRequirements.add("Have some sort of previous construction experience.");
@@ -116,10 +130,12 @@ public class MainActivity extends AppCompatActivity {
 
         Organization gardenBuilders = new Organization();
         gardenBuilders.opportunityLogo = R.drawable.opportunity_logo8;
+        gardenBuilders.opportunityExpandedLogo = R.drawable.opportunity_image_group8;
         gardenBuilders.opportunityName = "Garden bed Building";
         gardenBuilders.opportunityLocation = "Vancouver, B.C.";
         gardenBuilders.organizationName = "Garden Builders";
         gardenBuilders.opportunityApplyDate = "Start: Oct 10th";
+        gardenBuilders.opportunityExpandedDate = "Start by: Oct 10th";
         gardenBuilders.opportunityRequirements.add("Have common knowledge of agriculture tools.");
         gardenBuilders.opportunityRequirements.add("Be able to work safely with tools such as drills, hammers, nails, etc.");
         gardenBuilders.opportunityShortDescription = "Help us build garden beds for communities to plant flowers, fruits and vegetables.";
@@ -128,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         Organization rotaryFoundation = new Organization();
         rotaryFoundation.opportunityLogo = R.drawable.opportunity_logo9;
+        rotaryFoundation.opportunityExpandedLogo = R.drawable.opportunity_image_group9;
         rotaryFoundation.opportunityName = "Setup Helper";
         rotaryFoundation.opportunityLocation = "Vancouver, B.C.";
         rotaryFoundation.organizationName = "Rotary Foundation";
@@ -145,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         seniorAssistance.opportunityLocation = "Vancouver, B.C.";
         seniorAssistance.organizationName = "N/A";
         seniorAssistance.opportunityApplyDate = "Start: May 11th";
-        // ---------- for expanded opporutunites -------------------
+        // ---------- for expanded opportunities -------------------
         seniorAssistance.opportunityExpandedDate = "Start by: May 11th";
         seniorAssistance.opportunityRequirements.add("Be 16 years or older");
         seniorAssistance.opportunityRequirements.add("Have previous customer service skills");
