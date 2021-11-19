@@ -35,36 +35,50 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="174dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginTop="21dp"
                     android:fontFamily="@font/prompt"
                     android:text="PROFILE"
                     android:textColor="#FF000000"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="411dp"
+                    android:layout_height="2px"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="68dp"
+                    android:background="@drawable/rectangle3"  />
 
                 <ImageView
                     android:layout_width="411dp"
                     android:layout_height="56dp"
-                    android:layout_marginTop="93dp"
                     android:layout_marginStart="0dp"
-                    android:background="@drawable/rectangle2"/>
+                    android:layout_marginTop="69dp"
+                    android:background="@drawable/rectangle1" />
+
+                <ImageView
+                    android:layout_width="411dp"
+                    android:layout_height="2px"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="126dp"
+                    android:background="@drawable/rectangle3"  />
 
                 <TextView
                     android:id="@+id/opportunity_apply_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="116dp"
-                    android:layout_marginTop="108dp"
+                    android:layout_marginTop="87dp"
                     android:fontFamily="sans-serif"
                     android:text="Apply by: April 1st, 2021"
-                    android:textColor="#FFFFFFFF"
+                    android:textColor="#4D4D4D"
                     android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/opportunity_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="169dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="145dp"
                     android:background="@drawable/opportunity_image1" />
 
             </RelativeLayout>
