@@ -46,6 +46,7 @@ public class OrganizationScreen extends AppCompatActivity{
         ImageButton description_collapse_button = findViewById(R.id.description_collapse_button);
         LinearLayout requirements_linear_layout = findViewById(R.id.requirements_linear_layout);
         Button submit_button = findViewById(R.id.submit_form_button);
+        Button hide_button = findViewById(R.id.hide_opportunity_button);
 
         opportunity_apply_deadline.setText(currentOrg.opportunityApplyDeadline);
         opportunity_image.setImageResource(currentOrg.opportunityExpandedLogo);
@@ -69,6 +70,23 @@ public class OrganizationScreen extends AppCompatActivity{
                 ClipData clip = ClipData.newPlainText(clipText,employerEmail);
                 clipboard.setPrimaryClip(clip);
                 alertPopup(OrganizationScreen.this);
+            }
+        });
+
+        hide_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (MainActivity.humanitarianList.contains(currentOrg)) {
+                    MainActivity.humanitarianList.remove(currentOrg);
+                }
+                else if (MainActivity.fitnessList.contains(currentOrg)) {
+                    MainActivity.fitnessList.remove(currentOrg);
+                }
+                else if (MainActivity.constructionList.contains(currentOrg)) {
+                    MainActivity.constructionList.remove(currentOrg);
+                }
+                finish();
+                reload_matches();
             }
         });
 
@@ -130,5 +148,10 @@ public class OrganizationScreen extends AppCompatActivity{
                 .setPositiveButton("OK",null)
                 .setIcon(R.drawable.check)
                 .show();
+    }
+
+    private void reload_matches() {
+        Intent reload = new Intent(this, MatchesScreen.class);
+        startActivity(reload);
     }
 }

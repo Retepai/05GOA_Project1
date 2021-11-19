@@ -115,7 +115,7 @@
                     android:text="Humanitarian Aid"
                     android:textColor="#FF000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -134,6 +134,15 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/humanitarian_empty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="77dp"
+                    android:text="No opportunities available!"
+                    android:visibility="gone"/>
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -151,7 +160,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -168,6 +176,15 @@
                             android:orientation="horizontal"/>
 
                     </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fitness_empty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="77dp"
+                    android:text="No opportunities available!"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 
@@ -203,6 +220,15 @@
                             android:orientation="horizontal"/>
 
                     </LinearLayout>
+
+                <TextView
+                    android:id="@+id/construction_empty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="77dp"
+                    android:text="No opportunities available!"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 

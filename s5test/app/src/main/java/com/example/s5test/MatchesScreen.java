@@ -25,6 +25,9 @@ public class MatchesScreen extends AppCompatActivity {
         setContentView(R.layout.matches_screen);
 
         TextView matches_back_button = findViewById(R.id.matches_back_button);
+        TextView human_empty_text = findViewById(R.id.humanitarian_empty_text);
+        TextView fitness_empty_text = findViewById(R.id.fitness_empty_text);
+        TextView construct_empty_text = findViewById(R.id.construction_empty_text);
         Button senior_apply_button = findViewById(R.id.senior_apply_button);
 
         matches_back_button.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +44,16 @@ public class MatchesScreen extends AppCompatActivity {
                 open_org_screen();
             }
         });
+
+        if (MainActivity.humanitarianList.size() == 0) {
+            human_empty_text.setVisibility(View.VISIBLE);
+        }
+        if (MainActivity.fitnessList.size() == 0) {
+            fitness_empty_text.setVisibility(View.VISIBLE);
+        }
+        if (MainActivity.constructionList.size() == 0) {
+            construct_empty_text.setVisibility(View.VISIBLE);
+        }
 
         setupRecyclerView();
     }

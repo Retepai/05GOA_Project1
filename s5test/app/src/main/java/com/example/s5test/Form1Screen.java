@@ -80,33 +80,33 @@ public class Form1Screen extends AppCompatActivity {
             public void onClick(View v) {
 //                how to make it so this also checks if what the user typed is real numbers?
                 String userAge = age_edit_text.getText().toString().trim();
-                if (userAge.isEmpty() || userAge.matches("[a-zA-Z]+\\.?")){
-                    age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
-                    age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
-                    age_valid_number_error.setVisibility(View.VISIBLE);
-                    ageCriteriaFilled = false;
-                }
-                else {
+                if (!userAge.isEmpty() && userAge.matches("^[0-9]+$")){
                     age_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
                     age_edit_text.setTextColor(getResources().getColor(R.color.black));
                     age_edit_text.setHintTextColor(getResources().getColor(R.color.normal_grey));
                     age_valid_number_error.setVisibility(View.GONE);
                     ageCriteriaFilled = true;
                 }
+                else {
+                    age_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
+                    age_edit_text.setTextColor(getResources().getColor(R.color.error_red));
+                    age_valid_number_error.setVisibility(View.VISIBLE);
+                    ageCriteriaFilled = false;
+                }
 
                 String userCity = city_edit_text.getText().toString();
-                if (userCity.trim().isEmpty() || userCity.matches(".*\\d.*")) {
-                    city_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
-                    city_edit_text.setTextColor(getResources().getColor(R.color.error_red));
-                    city_valid_word_error.setVisibility(View.VISIBLE);
-                    cityCriteriaFilled = false;
-                }
-                else {
+                if (!userCity.trim().isEmpty() && userCity.matches("[a-zA-Z]+")) {
                     city_edit_text_box.setImageResource(R.drawable.rounded_rectangle2);
                     city_edit_text.setTextColor(getResources().getColor(R.color.black));
                     city_edit_text.setHintTextColor(getResources().getColor(R.color.normal_grey));
                     city_valid_word_error.setVisibility(View.GONE);
                     cityCriteriaFilled = true;
+                }
+                else {
+                    city_edit_text_box.setImageResource(R.drawable.rounded_rectangle5);
+                    city_edit_text.setTextColor(getResources().getColor(R.color.error_red));
+                    city_valid_word_error.setVisibility(View.VISIBLE);
+                    cityCriteriaFilled = false;
                 }
 
                 if (drivers_licence_radio_group.getCheckedRadioButtonId() == -1) {
