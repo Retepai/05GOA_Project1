@@ -200,7 +200,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/public_sans"
                     android:text="Certifications (Optional)"
                     android:textColor="#FF000000"
@@ -211,7 +211,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
-                    android:layout_marginTop="56dp"
+                    android:layout_marginTop="46dp"
                     android:fontFamily="@font/public_sans"
                     android:text="Select certifications you currently have"
                     android:textColor="#FF333333"
@@ -221,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="85dp">
+                    android:layout_marginTop="75dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
