@@ -131,9 +131,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="40dp"
                     android:layout_marginStart="0dp"
-                    android:background="@drawable/rectangle3"/>
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/rectangle3" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -149,14 +149,14 @@
                         android:text="Position Requirements"
                         android:textColor="#FF000000"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="19dp"
                         android:layout_marginStart="120dp"
-                        android:background="@drawable/collapse_button"/>
+                        android:layout_marginTop="19dp"
+                        android:background="@drawable/collapse_button" />
 
                 </LinearLayout>
 
@@ -183,9 +183,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginStart="0dp"
-                    android:background="@drawable/rectangle3"/>
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/rectangle3" />
 
             </LinearLayout>
 
@@ -266,28 +266,29 @@
             android:id="@+id/submit_form_button"
             android:layout_width="347dp"
             android:layout_height="57dp"
-            android:layout_marginTop="18dp"
             android:layout_marginStart="32dp"
-            android:fontFamily="sans-serif"
-            android:text="Copy email to clipboard"
-            android:textColor="#FFFFFFFF"
-            android:textSize="16sp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/rounded_rectangle1"
+            android:fontFamily="@font/public_sans"
+            android:text="Apply for position"
             android:textAllCaps="false"
-            android:background="@drawable/rounded_rectangle1"/>
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/hide_opportunity_button"
-            android:layout_width="347dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="97dp"
-            android:layout_marginStart="32dp"
-            android:fontFamily="sans-serif"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="175dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="118dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/invisible_rectangle2"
+            android:fontFamily="@font/public_sans"
             android:text="Hide / minimize opportunity"
-            android:textStyle="bold"
-            android:textColor="#FF35557F"
-            android:textSize="16sp"
             android:textAllCaps="false"
-            android:background="@drawable/invisible_rectangle2"/>
+            android:textColor="#FF35557F"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
