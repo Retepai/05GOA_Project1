@@ -173,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
         seniorAssistance.organizationName = "N/A";
         seniorAssistance.opportunityApplyDeadline = "Application closes Jul 19th, 2021";
         seniorAssistance.opportunityApplyDate = "Start: Jul 26th";
-        // ---------- for expanded opportunities -------------------
         seniorAssistance.opportunityExpandedDate = "Start by: Jul 26th";
         seniorAssistance.opportunityRequirements.add("Be 16 years or older");
         seniorAssistance.opportunityRequirements.add("Have previous customer service skills");
