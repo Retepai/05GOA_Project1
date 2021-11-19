@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         abcFoodBank.opportunityLocation = "Vancouver, B.C.";
         abcFoodBank.organizationName = "ABC Food Bank";
         abcFoodBank.opportunityApplyDate = "Start: Aug 10th";
+        abcFoodBank.opportunityRequirements.add("Be 16 years or older.");
+        abcFoodBank.opportunityRequirements.add("Pass a criminal background check.");
+        abcFoodBank.opportunityRequirements.add("Be able to work together and be compassionate towards.");
+        abcFoodBank.opportunityShortDescription = "Volunteer for us to help distribute food to those in need.";
+        abcFoodBank.opportunityDescription = "ABC Food Bank provides free meals to anyone in need in the community.";
         humanitarianList.add(abcFoodBank);
 
         Organization canadianRedCross = new Organization();
@@ -39,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         canadianRedCross.opportunityLocation = "Vancouver, B.C.";
         canadianRedCross.organizationName = "Canadian Red Cross";
         canadianRedCross.opportunityApplyDate = "Start: Apr 18th";
+        canadianRedCross.opportunityRequirements.add("Have a Class 5 Drivers License.");
+        canadianRedCross.opportunityRequirements.add("Be able to volunteer for 3+ hours in a day.");
+        canadianRedCross.opportunityRequirements.add("Pass a Criminal Background Check.");
+        canadianRedCross.opportunityShortDescription = "Help transport supplies to charities that help those in need of food.";
+        canadianRedCross.opportunityDescription = "The Canadian Red Cross is the leading humanitarian organization through which people voluntarily demonstrate their caring for others in need.";
         humanitarianList.add(canadianRedCross);
 
         Organization salvationArmy = new Organization();
@@ -47,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
         salvationArmy.opportunityLocation = "Vancouver, B.C.";
         salvationArmy.organizationName = "Salvation Army";
         salvationArmy.opportunityApplyDate = "Start: Apr 22nd";
+        salvationArmy.opportunityRequirements.add("Have a kitchen-safe certification.");
+        salvationArmy.opportunityRequirements.add("Be able to work proficiently with kitchen tools.");
+        salvationArmy.opportunityRequirements.add("Be at least 19 or older.");
+        salvationArmy.opportunityShortDescription = "Cook for the Salvation Army to provide for orphanages and homeless shelters.";
+        salvationArmy.opportunityDescription = "The Salvation Army is a Christian organization that gives hope and support to vulnerable people in 400 communities across Canada and in 132 countries.";
         humanitarianList.add(salvationArmy);
 
         Organization defRunForHealth = new Organization();
@@ -55,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
         defRunForHealth.opportunityLocation = "Vancouver, B.C.";
         defRunForHealth.organizationName = "DEF Run for Health";
         defRunForHealth.opportunityApplyDate = "Start: Jun 15th";
+        defRunForHealth.opportunityRequirements.add("Be 16 years or older.");
+        defRunForHealth.opportunityRequirements.add("Wear appropriate clothing for all weather conditions.");
+        defRunForHealth.opportunityShortDescription = "Participate in our 10K run as a volunteer to help us raise money for medical research.";
+        defRunForHealth.opportunityDescription = "DEF Health Raises money for Medical Research.";
         fitnessList.add(defRunForHealth);
 
         Organization mastersOfYoga = new Organization();
@@ -63,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
         mastersOfYoga.opportunityLocation = "Vancouver, B.C.";
         mastersOfYoga.organizationName = "Masters Of Yoga";
         mastersOfYoga.opportunityApplyDate = "Start: Feb 9th";
+        mastersOfYoga.opportunityRequirements.add("Be able to communicate well with others.");
+        mastersOfYoga.opportunityRequirements.add("Have a First-Aid/CPR certification.");
+        mastersOfYoga.opportunityShortDescription = "Volunteer to teach yoga to different and diverse groups of people.";
+        mastersOfYoga.opportunityDescription ="Masters of Yoga provides free yoga to the public to better help their well-being.";
         fitnessList.add(mastersOfYoga);
 
         Organization buddhistsOfTaiChi = new Organization();
@@ -71,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
         buddhistsOfTaiChi.opportunityLocation = "Vancouver, B.C.";
         buddhistsOfTaiChi.organizationName = "Buddhists of Tai-Chi";
         buddhistsOfTaiChi.opportunityApplyDate = "Start: Jun 20th";
+        buddhistsOfTaiChi.opportunityRequirements.add("Be 16 years or older.");
+        buddhistsOfTaiChi.opportunityRequirements.add("Wear appropriate clothing for all weather conditions.");
+        buddhistsOfTaiChi.opportunityRequirements.add("Have some sort of previous construction experience.");
+        buddhistsOfTaiChi.opportunityShortDescription = "Teach Tai-Chi to young adults and the elderly to help them de-stress and defend themselves.";
+        buddhistsOfTaiChi.opportunityDescription = "GHI Homes helps build homes for families in poverty-stricken locations worldwide.";
         fitnessList.add(buddhistsOfTaiChi);
 
         Organization ghiHomes = new Organization();
@@ -79,14 +107,23 @@ public class MainActivity extends AppCompatActivity {
         ghiHomes.opportunityLocation = "Vancouver, B.C.";
         ghiHomes.organizationName = "GHI Homes";
         ghiHomes.opportunityApplyDate = "Start: Mar 3rd";
+        ghiHomes.opportunityRequirements.add("Possess a worksite-safe certificate.");
+        ghiHomes.opportunityRequirements.add("Be at least 18 years or older.");
+        ghiHomes.opportunityRequirements.add("Have some sort of previous construction experience.");
+        ghiHomes.opportunityShortDescription = "Join us to help build homes for families for the summer or support us with your donations.";
+        ghiHomes.opportunityDescription = "GHI Homes helps build homes for families in poverty-stricken locations worldwide.";
         constructionList.add(ghiHomes);
 
         Organization gardenBuilders = new Organization();
         gardenBuilders.opportunityLogo = R.drawable.opportunity_logo8;
-        gardenBuilders.opportunityName = "Gardenbed Building";
+        gardenBuilders.opportunityName = "Garden bed Building";
         gardenBuilders.opportunityLocation = "Vancouver, B.C.";
         gardenBuilders.organizationName = "Garden Builders";
         gardenBuilders.opportunityApplyDate = "Start: Oct 10th";
+        gardenBuilders.opportunityRequirements.add("Have common knowledge of agriculture tools.");
+        gardenBuilders.opportunityRequirements.add("Be able to work safely with tools such as drills, hammers, nails, etc.");
+        gardenBuilders.opportunityShortDescription = "Help us build garden beds for communities to plant flowers, fruits and vegetables.";
+        gardenBuilders.opportunityDescription = "Garden Builders helps build gardens for communities that need a space to plant and grow various types of vegetation";
         constructionList.add(gardenBuilders);
 
         Organization rotaryFoundation = new Organization();
@@ -95,7 +132,13 @@ public class MainActivity extends AppCompatActivity {
         rotaryFoundation.opportunityLocation = "Vancouver, B.C.";
         rotaryFoundation.organizationName = "Rotary Foundation";
         rotaryFoundation.opportunityApplyDate = "Start: May 11th";
+        rotaryFoundation.opportunityExpandedDate = "Start by: May 11th";
+        rotaryFoundation.opportunityRequirements.add("Be 16 years or older");
+        rotaryFoundation.opportunityRequirements.add("Be able to lift chairs and tables");
+        rotaryFoundation.opportunityShortDescription = "Help out with an event for the Rotary Foundation that promotes youth education.";
+        rotaryFoundation.opportunityDescription ="The Rotary Foundation is a non-profit corporation that supports the efforts of Rotary International to achieve world understanding and peace through international humanitarian, educational, and cultural exchange programs.";
         constructionList.add(rotaryFoundation);
+
 
         seniorAssistance.opportunityLogo = R.drawable.recommended_match_picture1;
         seniorAssistance.opportunityName = "Senior Assistance";
@@ -109,7 +152,16 @@ public class MainActivity extends AppCompatActivity {
         seniorAssistance.opportunityRequirements.add("Talk and engage with residents");
         seniorAssistance.opportunityShortDescription = "Help assist elders in your community Vancouver, B.C. Wisteria Senior’s Home";
         seniorAssistance.opportunityDescription = "Wisteria Place is an innovative seniors’ living community in the spectacular waterfront community of Steveston, BC. At Wisteria Place, we provide activities and facilitate connections between our residents and the community, to help foster a sense of purpose. We are a community hub. We connect cultures.";
+
+
+
+
+
+
+
+
     }
+
 
     private void open_on_boarding_screen() {
         Intent open_form1_screen = new Intent(this, OnBoardingScreen.class);
