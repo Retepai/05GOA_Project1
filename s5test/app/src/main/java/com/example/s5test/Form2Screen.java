@@ -25,6 +25,8 @@ public class Form2Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form2_screen);
 
+        TextView form2_back_button= findViewById(R.id.form2_back_button);
+
         CheckBox mon_checkbox = findViewById(R.id.monday_checkbox);
         CheckBox tues_checkbox = findViewById(R.id.tuesday_checkbox);
         CheckBox wed_checkbox = findViewById(R.id.wednesday_checkbox);
@@ -52,6 +54,13 @@ public class Form2Screen extends AppCompatActivity {
 
         ArrayList<CheckBox> checkList = new ArrayList<>(Arrays.asList(mon_checkbox,tues_checkbox,wed_checkbox,thurs_checkbox,fri_checkbox,sat_checkbox,sun_checkbox));
         ArrayList<Button> tagsList = new ArrayList<>(Arrays.asList(business_b,arts_b,autos_b,comp_b,finance_b,games_b,fitness_b,books_b,home_b,human_b,construct_b));
+
+        form2_back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_form1_screen();
+            }
+        });
 
         submit_form_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +110,11 @@ public class Form2Screen extends AppCompatActivity {
             box.setChecked(true);
             box.setOnClickListener(v -> resetButtonColors(checkList,days_error_msg));
         }
+    }
+
+    private void open_form1_screen() {
+        Intent open_form1_screen = new Intent(this, Form1Screen.class);
+        startActivity(open_form1_screen);
     }
 
     private void open_matches_screen() {
