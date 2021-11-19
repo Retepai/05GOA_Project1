@@ -38,8 +38,7 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
         holder.opportunityName.setText(organization.opportunityName);
         holder.opportunityLocation.setText(organization.opportunityLocation);
         holder.organizationName.setText(organization.organizationName);
-//        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
-//        System.out.println(holder.opportunityApplyDate.toString());
+        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
 //        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -66,6 +65,5 @@ public class FitnessAdapter extends RecyclerView.Adapter<MatchesViewHolder>{
 //    public getCurrentOpportunity() {
 //        return currentOpportunity;
 //
-//        what is going on right now
 //    }
 }

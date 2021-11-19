@@ -38,7 +38,7 @@ public class HumanitarianAdapter extends RecyclerView.Adapter<MatchesViewHolder>
         holder.opportunityName.setText(organization.opportunityName);
         holder.opportunityLocation.setText(organization.opportunityLocation);
         holder.organizationName.setText(organization.organizationName);
-//        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
+        holder.opportunityApplyDate.setText(organization.opportunityApplyDate);
 
 //        holder.opportunityApply.setOnClickListener(new View.OnClickListener() {
 //            @Override
